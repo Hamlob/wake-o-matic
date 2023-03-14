@@ -6,5 +6,6 @@ void Filter::setAlpha(float value) {
 }
 
 int Filter::doFilter(int input) {
-	return roundf(input * alpha + accumulator * (1 - alpha));
+	accumulator = input * alpha + accumulator * (1 - alpha);
+	return roundf(accumulator);
 }
