@@ -7,7 +7,7 @@ class eventListenerHandler{
 class eventChannel{
 private:
     using idType id = unsigned int;
-    static const idType& genNextId(){
+    static idType genNextId(){
         static idType id = 0;
         return id++;
     }
