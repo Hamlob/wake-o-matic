@@ -12,11 +12,16 @@ project (
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -O3")
 
-include(cmake/StandardSettings.cmake)
-include(cmake/StaticAnalyzers.cmake)
-include(cmake/Utils.cmake)
+#include(cmake/StandardSettings.cmake)
+#include(cmake/StaticAnalyzers.cmake)
+#include(cmake/Utils.cmake)
 
 
 # Add the subdirectories relevant to code
 add_subdirectory (src)
 add_subdirectory (test)
+
+# install(TARGETS wake-o-matic-main)
+
+# enable_testing()
+# add_test(NAME main COMMAND main)
