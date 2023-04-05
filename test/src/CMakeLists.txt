@@ -1,7 +1,9 @@
-cmake_minimum_required(VERSION 3.2)
+cmake_minimum_required(VERSION 3.16)
 
 set(TEST_SOURCE_FILES mainUnitTests.cpp)
 set(TEST_EXECUTABLE )
+
+
 
 add_library(wake-o-matic-tests ${TEST_SOURCE_FILES})
 

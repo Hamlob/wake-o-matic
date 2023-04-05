@@ -44,3 +44,5 @@ test/lib/*
 
 *.cmake
 Makefile
+
+/.vscode/

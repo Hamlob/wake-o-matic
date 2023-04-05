@@ -1,7 +1,7 @@
 # CMakeLists files in this project can
 # refer to the root source directory of the project as ${HELLO_SOURCE_DIR} and
 # to the root binary directory of the project as ${HELLO_BINARY_DIR}.
-cmake_minimum_required(VERSION 3.2)
+cmake_minimum_required(VERSION 3.16)
 project (
     "Wake-o-matic"
     VERSION 0.1.0
@@ -11,6 +11,9 @@ project (
 #Define the used cmake standards
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -O3")
+
+#include cppunit library
+
 
 #include(cmake/StandardSettings.cmake)
 #include(cmake/StaticAnalyzers.cmake)
