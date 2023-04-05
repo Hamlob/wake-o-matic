@@ -10,7 +10,7 @@ project (
 
 #Define the used cmake standards
 set(CMAKE_CXX_STANDARD 11)
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -O3")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14")
 
 #include cppunit library
 
@@ -19,6 +19,8 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -O3")
 #include(cmake/StaticAnalyzers.cmake)
 #include(cmake/Utils.cmake)
 
+include(CTest)
+enable_testing()
 
 # Add the subdirectories relevant to code
 add_subdirectory (src)
@@ -27,4 +29,4 @@ add_subdirectory (test)
 # install(TARGETS wake-o-matic-main)
 
 # enable_testing()
-# add_test(NAME main COMMAND main)
+add_test(NAME main COMMAND wake-o-matic-main)
