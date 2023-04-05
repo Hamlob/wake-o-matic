@@ -31,14 +31,16 @@
 *.out
 *.app
 
-/bin/
+bin/*
+lib/*
 
 # Unit test generated artifacts
 
 CMakeCache.txt
 CMakeFiles
 test/*.cmake
-test/bin
+test/bin/*
+test/lib/*
 
 *.cmake
 Makefile
