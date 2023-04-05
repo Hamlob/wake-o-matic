@@ -9,5 +9,5 @@ add_subdirectory(modules)
 # when other libraries or executables link to wake-o-matic
 target_include_directories (wake-o-matic PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 
-add_executables(wake-o-matic-main main.cpp)
+add_executable(wake-o-matic-main main.cpp)
 target_link_libraries(wake-o-matic-main LINK_PUBLIC wake-o-matic-modules)
