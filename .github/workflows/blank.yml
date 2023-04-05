@@ -39,4 +39,4 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Run the test program
         run: |
-          echo still need to implement this
+          ctest
