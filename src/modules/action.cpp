@@ -4,6 +4,7 @@ void Action::threadLoop() {
     while(deviceActive){
         if(flagChanged == true){
             flagChanged = false;
+            if(nullptr == actionCallback) return;
             actionCallback->nextAction(warningFlag, sleepingFlag);
         }
     }
