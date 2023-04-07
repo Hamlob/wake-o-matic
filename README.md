@@ -12,8 +12,18 @@ This project is designed to be deployed under the following requirements, and ha
 * 
 
 ## Getting Started
+### Installation
 1. Clone the repository in a convenient location
-2. 
+2. `cd bin`
+3. `cmake ..`
+4. `cmake --build .`
+
+### Run Wake-o-matic
+From the `/bin/` folder, enter `./wake-o-matic-main`
+
+### Running the tests (not required)
+We utilise CTest, built-in with CMake, to issue our unit tests. You can run the tests yourself by entering `ctest` from the `/bin/` directory.
+
 
 ## File Structure
 `docs` contains documentation and diagrams produced through the project
