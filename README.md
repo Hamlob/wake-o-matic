@@ -9,7 +9,6 @@ This project is designed to be deployed under the following requirements, and ha
 * [Night vision camera module](https://shop.pimoroni.com/products/night-vision-camera-module-for-raspberry-pi), we recommend the 70° lens, but both work
 * [Raspberry Pi OS](https://www.raspberrypi.com/software/operating-systems/) (aka Raspian) 5.10 or newer
 * An audio amplifier/speaker compatible with rpi, [like this one](https://shop.pimoroni.com/products/adafruit-stemma-speaker-plug-and-play-audio-amplifier), along with the necessary cables to connect everything
-* 
 
 ## Getting Started
 ### Installation
