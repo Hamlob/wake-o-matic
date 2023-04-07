@@ -19,12 +19,12 @@ void Action::deactivate(){
     actionThread.join();
 }
 
-void setSleepingFlag(bool newVal){
+void Action::setSleepingFlag(bool newVal){
     sleepingFlag = newVal;
     flagChanged = true;
 }
 
-void setWarningFlag(bool newVal){
+void Action::setWarningFlag(bool newVal){
     warningFlag = newVal;
     flagChanged = true;
 }
