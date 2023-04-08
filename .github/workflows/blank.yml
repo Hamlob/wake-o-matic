@@ -33,9 +33,10 @@ jobs:
           sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 40976EAF437D05B5 
           sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 3B4FE6ACC0B21F32 
       - name: Install OpenCV
-        uses: Jenibluere/setup-opencv-action@v1.1.5
+        uses: Jenibluere/setup-opencv-action@v1.1.5 
         with:
           opencv-version: '4.0.0'
+          install-deps: false
 
       # Runs a single command using the runners shell
       - name: Try building the project
