@@ -37,6 +37,7 @@ jobs:
         with:
           opencv-version: '4.0.0'
           install-deps: false
+          ENABLE_PRECOMPILED_HEADERS: false
 
       # Runs a single command using the runners shell
       - name: Try building the project
