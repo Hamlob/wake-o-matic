@@ -32,7 +32,16 @@ jobs:
         run: |
           sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 40976EAF437D05B5 
           sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 3B4FE6ACC0B21F32 
+      
+      - name: Cache OpenCV
+        id: cache-opencv
+        uses: actions/cache@v2
+        with:
+          path: /usr/local
+          key: fixed-opencv-cache
+
       - name: Install OpenCV
+        if: steps.cache-opencv.output.cache-hit != 'true'
         uses: Jenibluere/setup-opencv-action@v1.1.5 
         with:
           opencv-version: '4.0.0'
