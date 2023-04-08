@@ -22,6 +22,11 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14")
 include(CTest)
 enable_testing()
 
+# Add opencv to compiler
+find_package( OpenCV REQUIRED )
+include_directories( ${OpenCV_INCLUDE_DIRS} )
+
+
 # Add the subdirectories relevant to code
 add_subdirectory (src)
 add_subdirectory (test)
