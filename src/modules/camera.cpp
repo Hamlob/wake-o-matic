@@ -1,4 +1,4 @@
-#include "../include/camera.h"
+#include "camera.h"
 
 /*!
  * Loops while camera is on to add frames to the pipeline

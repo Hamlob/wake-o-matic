@@ -11,9 +11,8 @@ public:
 	int doFilter(int input);
 
 private:
-	float accumulator;
+	float accumulator = 0;
 	float alpha = 0.5;
-	bool init = 1; 	//flag saying that the filter was not used before
 
 };
 
