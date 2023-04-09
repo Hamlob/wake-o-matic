@@ -47,4 +47,5 @@ Makefile
 
 /.vscode/
 
-docs/Doxygen
+docs/html
+docs/latex
