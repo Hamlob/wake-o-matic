@@ -47,5 +47,5 @@ Makefile
 
 /.vscode/
 
-html
-latex
+docs/html
+docs/latex
