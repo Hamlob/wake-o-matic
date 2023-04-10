@@ -2,6 +2,12 @@
 #include <cassert>
 #include "cppTests.h"
 
+/**
+ * @brief Test runner
+ * Optional run_test program to execute each test method. 
+ * Alternatively, CTest can be configured to compile individual tests 
+ * and run the test methods directly.
+ */
 int main() {
     std::cout << "Tests started!" << std::endl;
 
