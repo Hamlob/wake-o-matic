@@ -46,3 +46,6 @@ test/lib/*
 Makefile
 
 /.vscode/
+
+docs/html
+docs/latex
