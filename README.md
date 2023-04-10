@@ -1,7 +1,9 @@
 # Wake-o-matic
 Microsleep and drowsiness detection for drivers using Raspberry Pi 4. Uses openCV library for eye recognition.
 
-Feel free to visit [our GitHub wiki](https://github.com/Hamlob/wake-o-matic/wiki) to learn more about the project!
+## Follow Us!
+[Check out our Linktree](https://linktr.ee/wakeomatic) for all of our social medias!
+[Visit our documentation](https://github.com/Hamlob/wake-o-matic/wiki) to learn how to use the project.
 
 ## About the Project
 Driving while drowsy is a danger that all of us are aware of, however most of us can probably think of an example of a time we took the risk in order to get to our destination. [According to road safety charity, Brake](https://www.brake.org.uk/get-involved/take-action/mybrake/knowledge-centre/driver-fatigue#:~:text=Worldwide%2C%20it%20is%20estimated%20that,road%20crashes%20are%20fatigue%2Drelated.), 1 in 8 drivers admit to falling asleep at the wheel, with an estimated 10-20% of UK traffic accidents being fatigue related.
@@ -32,7 +34,6 @@ From the `/bin/` folder, enter `./wake-o-matic-main`
 
 ### Running the tests (not required)
 We utilise CTest, built-in with CMake, to issue our unit tests. You can run the tests yourself by entering `ctest` from the `/bin/` directory.
-
 
 ## File Structure
 `docs` contains documentation and diagrams produced through the project
