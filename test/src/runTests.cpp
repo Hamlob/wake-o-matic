@@ -2,20 +2,14 @@
 #include <cassert>
 #include "cppTests.h"
 
-#define assertm(exp, msg) assert(((void)msg, exp))
-
 int main() {
     std::cout << "Tests started!" << std::endl;
 
-    std::cout << "Test 1" << std::endl;    
-    assertm(test_listener_triggered_by_sleeping(), "Listener not triggered by sleeping flag");
-    
-    std::cout << "Test 1 passed\nTest2" << std::endl;
-    assertm(test_listener_triggered_by_warning(), "Listener not triggered by warning flag");
-    // test_speaker_plays_warning();
-    // test_speaker_plays_alarm();
-    // test_no_action_if_no_flags();
+    test_sleeping_flag_set();
+    test_warning_flag_set();
+    test_listener_triggered_by_sleeping();
+    test_listener_triggered_by_warning();
 
-    std::cout << "Tests (0) succeeded!" << std::endl;
+    std::cout << "Tests (4) succeeded!" << std::endl;
     return 0; // You can put a 1 here to see later that it would generate an error
 }

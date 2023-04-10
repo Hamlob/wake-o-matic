@@ -1,38 +1,61 @@
 #include "cppTests.h"
 #include<unistd.h> 
+#include <cassert>
 
-bool test_listener_triggered_by_sleeping(){
-    struct MyCallback : Action::ActionCallback {
-        bool callbackCalled = false;
-        virtual void nextAction(bool warning, bool sleeping){
-            callbackCalled = true;
-        }
-    };
-    MyCallback myCallback;
+bool test_sleeping_flag_set(){
     Action myAction;
-    myAction.registerActionCallback(&myCallback);
     myAction.activate();
 
     myAction.setSleepingFlag(true);
+    bool result = myAction.getSleepingFlag();
+
+    myAction.deactivate();
+    assertm(result, "sleeping flag not set");
+    return true;
+}
+
+bool test_warning_flag_set(){
+    Action myAction;
+    myAction.activate();
+    
+    myAction.setWarningFlag(true);
+    bool result = myAction.getWarningFlag();
+
+    myAction.deactivate();
+    assertm(result, "warning flag not set");
+    return true;
+}
+
+bool test_listener_triggered_by_sleeping(){
+    Action myAction;
+    myAction.setSleepTimeBetweenActions_ms(1000);
+    myAction.activate();
+
+    myAction.setSleepingFlag(true);
+    const auto start = std::chrono::high_resolution_clock::now();
     sleep(0.2);
     myAction.deactivate();
-    return myCallback.callbackCalled;
+    const auto end = std::chrono::high_resolution_clock::now();
+
+    const std::chrono::duration<double, std::milli> elapsed = end - start;
+
+    assertm((elapsed > std::chrono::milliseconds(1000)), "threadLoop exited impossibly quickly");
+    return true;
 }
 
 bool test_listener_triggered_by_warning(){
-    struct MyCallback : Action::ActionCallback {
-        bool callbackCalled = false;
-        virtual void nextAction(bool warning, bool sleeping){
-            callbackCalled = true;
-        }
-    };
-    MyCallback myCallback;
     Action myAction;
-    myAction.registerActionCallback(&myCallback);
+    myAction.setSleepTimeBetweenActions_ms(1000);
     myAction.activate();
 
     myAction.setWarningFlag(true);
+    const auto start = std::chrono::high_resolution_clock::now();
     sleep(0.2);
     myAction.deactivate();
-    return myCallback.callbackCalled;
+    const auto end = std::chrono::high_resolution_clock::now();
+
+    const std::chrono::duration<double, std::milli> elapsed = end - start;
+
+    assertm((elapsed > std::chrono::milliseconds(1000)), "threadLoop exited impossibly quickly");
+    return true;
 }
