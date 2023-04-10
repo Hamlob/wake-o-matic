@@ -23,7 +23,6 @@ From the `/bin/` folder, enter `./wake-o-matic-main`
 ### Running the tests (not required)
 We utilise CTest, built-in with CMake, to issue our unit tests. You can run the tests yourself by entering `ctest` from the `/bin/` directory.
 
-
 ## File Structure
 `docs` contains documentation and diagrams produced through the project
 `include` and `lib` are blank folders, populated by CMake when built locally
@@ -32,3 +31,6 @@ We utilise CTest, built-in with CMake, to issue our unit tests. You can run the 
 `test`
 | `test/lib` is a blank folder, populated by CMake for test-specific libraries
 | `test/src` contains C++ unit testing files (CppUnit)
+
+## Follow Us!
+[Check out our Linktree](https://linktr.ee/wakeomatic) for all of our social medias!
