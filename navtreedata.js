@@ -25,13 +25,17 @@
 var NAVTREE =
 [
   [ "wake-o-matic", "index.html", [
-    [ "Requirements", "index.html#autotoc_md1", null ],
-    [ "Getting Started", "index.html#autotoc_md2", [
-      [ "Installation", "index.html#autotoc_md3", null ],
-      [ "Run Wake-o-matic", "index.html#autotoc_md4", null ],
-      [ "Running the tests (not required)", "index.html#autotoc_md5", null ]
+    [ "Follow Us!", "index.html#autotoc_md1", null ],
+    [ "About the Project", "index.html#autotoc_md2", null ],
+    [ "Why are we doing this?", "index.html#autotoc_md3", null ],
+    [ "Getting Started", "index.html#autotoc_md4", [
+      [ "Requirements", "index.html#autotoc_md5", null ],
+      [ "Installation", "index.html#autotoc_md6", null ],
+      [ "Run Wake-o-matic", "index.html#autotoc_md7", null ],
+      [ "Running the tests (not required)", "index.html#autotoc_md8", null ]
     ] ],
-    [ "File Structure", "index.html#autotoc_md6", null ],
+    [ "File Structure", "index.html#autotoc_md9", null ],
+    [ "Founders", "index.html#autotoc_md10", null ],
     [ "Files", "files.html", [
       [ "File List", "files.html", "files_dup" ],
       [ "File Members", "globals.html", [
