@@ -90,28 +90,103 @@ $(document).ready(function(){initNavTree('cppTests_8cpp.html',''); initResizable
 <div class="title">cppTests.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;iostream&gt;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="cppTests_8h_source.html">cppTests.h</a>&quot;</code><br />
+<code>#include &lt;unistd.h&gt;</code><br />
+<code>#include &lt;cassert&gt;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cppTests_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
-<tr class="separator:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61187e66d765b2c90fea42f064b76984"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cppTests_8cpp.html#a61187e66d765b2c90fea42f064b76984">test_sleeping_flag_set</a> ()</td></tr>
+<tr class="memdesc:a61187e66d765b2c90fea42f064b76984"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates action thread and ensures sleeping flag is set correctly.  <a href="cppTests_8cpp.html#a61187e66d765b2c90fea42f064b76984">More...</a><br /></td></tr>
+<tr class="separator:a61187e66d765b2c90fea42f064b76984"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1fee4a6237572a0ce2dde8c95689ca1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cppTests_8cpp.html#aa1fee4a6237572a0ce2dde8c95689ca1">test_warning_flag_set</a> ()</td></tr>
+<tr class="memdesc:aa1fee4a6237572a0ce2dde8c95689ca1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates action thread and ensures warning flag is set correctly.  <a href="cppTests_8cpp.html#aa1fee4a6237572a0ce2dde8c95689ca1">More...</a><br /></td></tr>
+<tr class="separator:aa1fee4a6237572a0ce2dde8c95689ca1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84542009e11949175043f2ca3b21056f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cppTests_8cpp.html#a84542009e11949175043f2ca3b21056f">test_listener_triggered_by_sleeping</a> ()</td></tr>
+<tr class="memdesc:a84542009e11949175043f2ca3b21056f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates action thread and checks thread executes action logic when a flag is set.  <a href="cppTests_8cpp.html#a84542009e11949175043f2ca3b21056f">More...</a><br /></td></tr>
+<tr class="separator:a84542009e11949175043f2ca3b21056f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d2737aa93bd9778ccbeba738167bd0d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cppTests_8cpp.html#a6d2737aa93bd9778ccbeba738167bd0d">test_listener_triggered_by_warning</a> ()</td></tr>
+<tr class="memdesc:a6d2737aa93bd9778ccbeba738167bd0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates action thread and checks thread executes action logic when a flag is set.  <a href="cppTests_8cpp.html#a6d2737aa93bd9778ccbeba738167bd0d">More...</a><br /></td></tr>
+<tr class="separator:a6d2737aa93bd9778ccbeba738167bd0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="ae66f6b31b5ad750f1fe042a706a4e3d4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae66f6b31b5ad750f1fe042a706a4e3d4">&#9670;&nbsp;</a></span>main()</h2>
+<a id="a84542009e11949175043f2ca3b21056f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84542009e11949175043f2ca3b21056f">&#9670;&nbsp;</a></span>test_listener_triggered_by_sleeping()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int main </td>
+          <td class="memname">bool test_listener_triggered_by_sleeping </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Creates action thread and checks thread executes action logic when a flag is set. </p>
+<dl class="section return"><dt>Returns</dt><dd>True if test completed </dd></dl>
+
+</div>
+</div>
+<a id="a6d2737aa93bd9778ccbeba738167bd0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d2737aa93bd9778ccbeba738167bd0d">&#9670;&nbsp;</a></span>test_listener_triggered_by_warning()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool test_listener_triggered_by_warning </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creates action thread and checks thread executes action logic when a flag is set. </p>
+<dl class="section return"><dt>Returns</dt><dd>True if test completed </dd></dl>
+
+</div>
+</div>
+<a id="a61187e66d765b2c90fea42f064b76984"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61187e66d765b2c90fea42f064b76984">&#9670;&nbsp;</a></span>test_sleeping_flag_set()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool test_sleeping_flag_set </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creates action thread and ensures sleeping flag is set correctly. </p>
+<dl class="section return"><dt>Returns</dt><dd>True if test completed </dd></dl>
+
+</div>
+</div>
+<a id="aa1fee4a6237572a0ce2dde8c95689ca1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1fee4a6237572a0ce2dde8c95689ca1">&#9670;&nbsp;</a></span>test_warning_flag_set()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool test_warning_flag_set </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creates action thread and ensures warning flag is set correctly. </p>
+<dl class="section return"><dt>Returns</dt><dd>True if test completed </dd></dl>
 
 </div>
 </div>
