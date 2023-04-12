@@ -1,7 +1,61 @@
-#include <iostream>
+#include "cppTests.h"
+#include<unistd.h> 
+#include <cassert>
 
-int main() {
-    std::cout << "Tests started!" << std::endl;
-    std::cout << "Tests (0) succeeded!" << std::endl;
-    return 0; // You can put a 1 here to see later that it would generate an error
+bool test_sleeping_flag_set(){
+    Action myAction;
+    myAction.activate();
+
+    myAction.setSleepingFlag(true);
+    bool result = myAction.getSleepingFlag();
+
+    myAction.deactivate();
+    assertm(result, "sleeping flag not set");
+    return true;
+}
+
+bool test_warning_flag_set(){
+    Action myAction;
+    myAction.activate();
+    
+    myAction.setWarningFlag(true);
+    bool result = myAction.getWarningFlag();
+
+    myAction.deactivate();
+    assertm(result, "warning flag not set");
+    return true;
+}
+
+bool test_listener_triggered_by_sleeping(){
+    Action myAction;
+    myAction.setSleepTimeBetweenActions_ms(1000);
+    myAction.activate();
+
+    myAction.setSleepingFlag(true);
+    const auto start = std::chrono::high_resolution_clock::now();
+    sleep(0.2);
+    myAction.deactivate();
+    const auto end = std::chrono::high_resolution_clock::now();
+
+    const std::chrono::duration<double, std::milli> elapsed = end - start;
+
+    assertm((elapsed > std::chrono::milliseconds(1000)), "threadLoop exited impossibly quickly");
+    return true;
+}
+
+bool test_listener_triggered_by_warning(){
+    Action myAction;
+    myAction.setSleepTimeBetweenActions_ms(1000);
+    myAction.activate();
+
+    myAction.setWarningFlag(true);
+    const auto start = std::chrono::high_resolution_clock::now();
+    sleep(0.2);
+    myAction.deactivate();
+    const auto end = std::chrono::high_resolution_clock::now();
+
+    const std::chrono::duration<double, std::milli> elapsed = end - start;
+
+    assertm((elapsed > std::chrono::milliseconds(1000)), "threadLoop exited impossibly quickly");
+    return true;
 }
