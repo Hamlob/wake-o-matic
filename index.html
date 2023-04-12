@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>wake-o-matic: Wake-o-matic</title>
+<title>wake-o-matic: Main Page</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,6 +25,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="icon.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">wake-o-matic
    &#160;<span id="projectnumber">V1.0</span>
@@ -85,51 +86,55 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
 
 <div class="PageDoc"><div class="header">
   <div class="headertitle">
-<div class="title">Wake-o-matic </div>  </div>
+<div class="title">wake-o-matic Documentation</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="anchor" id="md_README"></a>Microsleep and drowsiness detection for drivers using Raspberry Pi 4. Uses openCV library for eye recognition.</p>
-<h1><a class="anchor" id="autotoc_md1"></a>
-Follow Us!</h1>
+<div class="textblock"><p align="center" style="margin-bottom: 0px !important;"><a class="anchor" id="md_README"></a> </p>
+<p><img src="docs/img/logo_vector.svg" alt="Wake-o-matic logo" style="pointer-events: none;" width="200" align="center" class="inline"/> </p>
+<h1 align="center" style="margin-top: 0px;">Wake-o-matic</h1>
+<p align="center"></p>
+<p>Microsleep and drowsiness detection for drivers using Raspberry Pi 4. Uses openCV library for eye recognition.</p>
+<h2><a class="anchor" id="autotoc_md0"></a>
+Follow Us!</h2>
 <p><a href="https://linktr.ee/wakeomatic">Check out our Linktree</a> for all of our social medias!</p>
 <p><a href="https://hamlob.github.io/wake-o-matic/">Visit our documentation</a> to learn how to use the project.</p>
-<h1><a class="anchor" id="autotoc_md2"></a>
-About the Project</h1>
+<h2><a class="anchor" id="autotoc_md1"></a>
+About the Project</h2>
 <p>Driving while drowsy is a danger that all of us are aware of, however most of us can probably think of an example of a time we took the risk in order to get to our destination. <a href="https://www.brake.org.uk/get-involved/take-action/mybrake/knowledge-centre/driver-fatigue#:~:text=Worldwide%2C%20it%20is%20estimated%20that,road%20crashes%20are%20fatigue%2Drelated.">According to road safety charity, Brake</a>, 1 in 8 drivers admit to falling asleep at the wheel, with an estimated 10-20% of UK traffic accidents being fatigue related.</p>
 <p>Of course, this project won't fix all the problems, but we aim to provide a tool to help drivers understand their limits <em>before</em> an accident occurs. Besides, who better to try to find a solution than a bunch of sleepy, final-year engineering students!</p>
-<h1><a class="anchor" id="autotoc_md3"></a>
-Why are we doing this?</h1>
+<h2><a class="anchor" id="autotoc_md2"></a>
+Why are we doing this?</h2>
 <p>Wake-o-Matic is project born out of a coursework assignment at the School of Engineering, University of Glasgow.</p>
 <p>The open-ended assignment brief is to develop a real-time solution to a problem, which lead us to address a problem that has affected the entire team at some point.</p>
-<h1><a class="anchor" id="autotoc_md4"></a>
-Getting Started</h1>
-<h2><a class="anchor" id="autotoc_md5"></a>
-Requirements</h2>
+<h2><a class="anchor" id="autotoc_md3"></a>
+Getting Started</h2>
+<h3><a class="anchor" id="autotoc_md4"></a>
+Requirements</h3>
 <p>This project is designed to be deployed under the following requirements, and has only been tested as such; however you may find ways to make it work on other systems.</p><ul>
 <li><a href="https://www.raspberrypi.com/products/raspberry-pi-3-model-b-plus/">Raspberry Pi</a> (model 3B+ or newer) and compatible power supply</li>
 <li><a href="https://shop.pimoroni.com/products/night-vision-camera-module-for-raspberry-pi">Night vision camera module</a>, we recommend the 70° lens, but both work</li>
 <li><a href="https://www.raspberrypi.com/software/operating-systems/">Raspberry Pi OS</a> (aka Raspian) 5.10 or newer</li>
 <li>An audio amplifier/speaker compatible with rpi, <a href="https://shop.pimoroni.com/products/adafruit-stemma-speaker-plug-and-play-audio-amplifier">like this one</a>, along with the necessary cables to connect everything</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md6"></a>
-Installation</h2>
+<h3><a class="anchor" id="autotoc_md5"></a>
+Installation</h3>
 <ol type="1">
 <li>Clone the repository in a convenient location</li>
 <li><code>cd bin</code></li>
 <li><code>cmake ..</code></li>
 <li><code>cmake --build .</code></li>
 </ol>
-<h2><a class="anchor" id="autotoc_md7"></a>
-Run Wake-o-matic</h2>
+<h3><a class="anchor" id="autotoc_md6"></a>
+Run Wake-o-matic</h3>
 <p>From the <code>/bin/</code> folder, enter <code>./wake-o-matic-main</code></p>
-<h2><a class="anchor" id="autotoc_md8"></a>
-Running the tests (not required)</h2>
+<h3><a class="anchor" id="autotoc_md7"></a>
+Running the tests (not required)</h3>
 <p>We utilise CTest, built-in with CMake, to issue our unit tests. You can run the tests yourself by entering <code>ctest</code> from the <code>/bin/</code> directory.</p>
-<h1><a class="anchor" id="autotoc_md9"></a>
-File Structure</h1>
+<h2><a class="anchor" id="autotoc_md8"></a>
+File Structure</h2>
 <p><code>docs</code> contains documentation and diagrams produced through the project <code>include</code> and <code>lib</code> are blank folders, populated by CMake when built locally <code>src</code> contains main source code to build | <code>src/modules</code> contains C++ files for various sub-procedures <code>test</code> | <code>test/lib</code> is a blank folder, populated by CMake for test-specific libraries | <code>test/src</code> contains C++ unit testing files (CppUnit)</p>
-<h1><a class="anchor" id="autotoc_md10"></a>
-Founders</h1>
+<h2><a class="anchor" id="autotoc_md9"></a>
+Founders</h2>
 <ul>
 <li><a href="https://github.com/Jenibluere">Charlie Cameron</a></li>
 <li><a href="https://github.com/GJaradat">Gabriel Dzharadat</a></li>
