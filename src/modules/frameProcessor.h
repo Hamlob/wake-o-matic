@@ -6,6 +6,8 @@
 #include "eyeStatus.h"
 #include "camera.h" //https://github.com/berndporr/opencv-camera-callback
 #include <opencv2/opencv.hpp>
+#include <condition_variable>
+#include <mutex>
 
 using namespace std;
 using namespace cv;
@@ -15,10 +17,14 @@ using namespace cv;
 #define EYES_OPEN 1
 
 extern std::queue<Mat> frame_queue;
-extern std::mutex queue_mutex;
-extern std::condition_variable queue_cv;
+extern std::mutex frame_mutex;
+extern std::condition_variable frame_cv;
 extern bool processed;
 
+extern std::queue<int> status_queue;
+extern std::mutex status_mutex;
+extern std::condition_variable status_cv;
+extern bool loading;
 
 class FrameProcessor
 {
@@ -48,7 +54,7 @@ public:
 private:
 	//processes the input frame and returns a value
 	int processFrame(Mat& frame);
-	
+
 	void threadLoop();
 	bool isOn = false;
 	std::thread frameProcessorThread;

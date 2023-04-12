@@ -10,10 +10,11 @@ project (
 
 #Define the used cmake standards
 set(CMAKE_CXX_STANDARD 11)
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14 -pthread")
 
 #include cppunit library
-
+find_package( OpenCV REQUIRED)
+include_directories( ${OpenCV_INCLUDE_DIRS})
 
 #include(cmake/StandardSettings.cmake)
 #include(cmake/StaticAnalyzers.cmake)
@@ -21,11 +22,6 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14")
 
 include(CTest)
 enable_testing()
-
-# Add opencv to compiler
-find_package( OpenCV REQUIRED )
-include_directories( ${OpenCV_INCLUDE_DIRS} )
-
 
 # Add the subdirectories relevant to code
 add_subdirectory (src)
