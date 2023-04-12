@@ -1,5 +1,8 @@
-# Wake-o-matic
-Microsleep and drowsiness detection for drivers using Raspberry Pi 4. Uses openCV library for eye recognition.
+<p align="center" style="margin-bottom: 0px !important;">
+    <img width="200" src="docs/img/logo_vector.svg" alt="Wake-o-matic logo" align="center">
+</p>
+<h1 align="center" style="margin-top: 0px;">Wake-o-matic</h1>
+<p align="center" >Microsleep and drowsiness detection for drivers using Raspberry Pi 4. Uses openCV library for eye recognition.</p>
 
 ## Follow Us!
 [Check out our Linktree](https://linktr.ee/wakeomatic) for all of our social medias!
