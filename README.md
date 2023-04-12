@@ -1,4 +1,4 @@
-<p style="align:center">
+<p align="center" style="margin-bottom: 0px !important;">
     <img width="200" src="docs/img/logo_vector.svg" alt="Wake-o-matic logo" align="center">
 </p>
 <h1 align="center" style="margin-top: 0px;">Wake-o-matic</h1>
