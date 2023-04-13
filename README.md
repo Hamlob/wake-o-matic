@@ -23,6 +23,9 @@ The open-ended assignment brief is to develop a real-time solution to a problem,
 ### Requirements
 This project is designed to be deployed under the following requirements, and has only been tested as such; however you may find ways to make it work on other systems.
 * [Raspberry Pi](https://www.raspberrypi.com/products/raspberry-pi-3-model-b-plus/) (model 3B+ or newer) and compatible power supply
+    - With OpenCV installed
+    - Boost installed (V1.71)
+    - CMake installed
 * [Night vision camera module](https://shop.pimoroni.com/products/night-vision-camera-module-for-raspberry-pi), we recommend the 70° lens, but both work
 * [Raspberry Pi OS](https://www.raspberrypi.com/software/operating-systems/) (aka Raspian) 5.10 or newer
 * An audio amplifier/speaker compatible with rpi, [like this one](https://shop.pimoroni.com/products/adafruit-stemma-speaker-plug-and-play-audio-amplifier), along with the necessary cables to connect everything
