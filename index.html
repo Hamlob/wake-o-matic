@@ -90,7 +90,7 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p align="center" style="margin-bottom: 0px !important;"><a class="anchor" id="md_README"></a> </p>
-<p><img src="docs/img/logo_vector.svg" alt="Wake-o-matic logo" style="pointer-events: none;" width="200" align="center" class="inline"/> </p>
+<p><img src="https://github.com/Hamlob/wake-o-matic/blob/main/docs/img/logo_vector.svg" alt="Wake-o-matic logo" style="pointer-events: none;" width="200" align="center" class="inline"/> </p>
 <h1 align="center" style="margin-top: 0px;">Wake-o-matic</h1>
 <p align="center"></p>
 <p>Microsleep and drowsiness detection for drivers using Raspberry Pi 4. Uses openCV library for eye recognition.</p>
@@ -111,7 +111,12 @@ Getting Started</h2>
 <h3><a class="anchor" id="autotoc_md4"></a>
 Requirements</h3>
 <p>This project is designed to be deployed under the following requirements, and has only been tested as such; however you may find ways to make it work on other systems.</p><ul>
-<li><a href="https://www.raspberrypi.com/products/raspberry-pi-3-model-b-plus/">Raspberry Pi</a> (model 3B+ or newer) and compatible power supply</li>
+<li><a href="https://www.raspberrypi.com/products/raspberry-pi-3-model-b-plus/">Raspberry Pi</a> (model 3B+ or newer) and compatible power supply<ul>
+<li>With OpenCV installed</li>
+<li>Boost installed (V1.71)</li>
+<li>CMake installed</li>
+</ul>
+</li>
 <li><a href="https://shop.pimoroni.com/products/night-vision-camera-module-for-raspberry-pi">Night vision camera module</a>, we recommend the 70° lens, but both work</li>
 <li><a href="https://www.raspberrypi.com/software/operating-systems/">Raspberry Pi OS</a> (aka Raspian) 5.10 or newer</li>
 <li>An audio amplifier/speaker compatible with rpi, <a href="https://shop.pimoroni.com/products/adafruit-stemma-speaker-plug-and-play-audio-amplifier">like this one</a>, along with the necessary cables to connect everything</li>
