@@ -1,4 +1,5 @@
 #include "action.h"
+#include "logging.h"
 
 void Action::threadLoop() {
     while(deviceActive){
@@ -24,7 +25,7 @@ Action::ActionResult Action::completeAction(){
         try{
             outputWarning();
         } catch(...){
-            OOST_LOG_TRIVIAL(error) << "Warning Error";
+            BOOST_LOG_TRIVIAL(error) << "Warning Error";
             return error;
         }
         return warning;
