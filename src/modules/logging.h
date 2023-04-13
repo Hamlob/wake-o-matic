@@ -6,11 +6,14 @@
 
 /**
  * @brief Initialise log file using Boost
- * Configured to write to log file "logger.log" in build directory
+ * Configured to write to log file "logger.log" in build directory.
+ * 
  * See https://www.boost.org/ for more information on Boost
- *
- * \section Usage:
- * @example BOOST_LOG_TRIVIAL(trace) << "This is a trace severity message"
- * severity levels include: trace, debug, info, warning, error, fatal.
+ * 
+ * ### Usage
+ * 
+ *      BOOST_LOG_TRIVIAL(SEVERITY) << "This is a log message"
+ * 
+ * SEVERITY levels include: `trace`, `debug`, `info`, `warning`, `error`, `fatal`.
  */
 void init_logging();
