@@ -41,9 +41,7 @@ jobs:
             
       - name: Configure CMake
         run: |
-            cmake . -DCMAKE_BUILD_TYPE=$BUILD_TYPE -B bin\
-            -DBoost_INCLUDE_DIR=${{steps.install-boost.outputs.BOOST_ROOT}}/include\
-            -DBoost_LIBRARY_DIRS=${{steps.install-boost.outputs.BOOST_ROOT}}/lib
+            
         env:
             BOOST_ROOT: ${{ steps.install-boost.outputs.BOOST_ROOT }}
             
@@ -51,6 +49,7 @@ jobs:
       - name: Try building the project
         run: |
           cd bin/
+          cmake .. -DCMAKE_BUILD_TYPE=$BUILD_TYPE -DBoost_INCLUDE_DIR=${{steps.install-boost.outputs.BOOST_ROOT}}/include\ -DBoost_LIBRARY_DIRS=${{steps.install-boost.outputs.BOOST_ROOT}}/lib
           cmake --build .
         env:
           BOOST_ROOT: ${{ steps.install-boost.outputs.BOOST_ROOT }}
