@@ -1,36 +1,12 @@
-#pragma once
+#include <boost/log/core.hpp>
+#include <boost/log/trivial.hpp>
+#include <boost/log/expressions.hpp>
+#include <boost/log/utility/setup/file.hpp>
+#include <boost/log/utility/setup/common_attributes.hpp>
 
-#include <stdlib.h>
-#include <thread>
-#include <iostream>
-#include <fstream>
-#include <string>
-#include <ctime>
-
-using namespace std;
-
-/// @brief Logging class used to keep a record of what has happened
-class Logging{
-    public:
-        Logging() = default; 
-
-        void start_log();
-
-        void write_to_log();
-
-        void stop_log();
-
-        void setloggingFlag(bool newVal);
-
-        void getLoggingFlag(){
-            return loggingFlag;
-        }
-
-    private:
-
-        // Internal flags
-        bool loggingFlag = false;
-
-        bool flagChanged = false;
-        bool deviceActive = false;
-};
+/**
+ * @brief Initialise log file using Boost
+ * Configured to write to log file "logger.log" in build directory
+ * See https://www.boost.org/ for more information on Boost
+ */
+void init_logging();

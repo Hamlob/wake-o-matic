@@ -13,4 +13,4 @@ set_target_properties(wake-o-matic-main PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${C
 
 target_include_directories (wake-o-matic-main PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 
-target_link_libraries(wake-o-matic-main LINK_PUBLIC wake-o-matic-modules)
+target_link_libraries(wake-o-matic-main LINK_PUBLIC wake-o-matic-modules ${Boost_LIBS} ${Boost_LOG_LIBRARY} ${Boost_LOG_SETUP_LIBRARY} ${OpenMP_LIBS})
