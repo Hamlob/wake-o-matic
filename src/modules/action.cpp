@@ -3,7 +3,8 @@
 void Action::threadLoop() {
     while(deviceActive){
         if(flagChanged == true){
-            ActionResult actionResult = completeAction();           // TODO: make this log a message when logging functionality is complete.
+            ActionResult actionResult = completeAction();
+            BOOST_LOG_TRIVIAL(info) << "Action started";
             std::this_thread::sleep_for(sleepTimeBetweenActions_ms);
             flagChanged = false;
         }
@@ -15,6 +16,7 @@ Action::ActionResult Action::completeAction(){
         try{
             outputAlarm();
         } catch(...){
+            BOOST_LOG_TRIVIAL(error) << "Alarm Error";
             return error;
         }
         return alarm;
@@ -22,6 +24,7 @@ Action::ActionResult Action::completeAction(){
         try{
             outputWarning();
         } catch(...){
+            OOST_LOG_TRIVIAL(error) << "Warning Error";
             return error;
         }
         return warning;
@@ -59,6 +62,7 @@ void Action::outputAlarm(){
     if(0 != std::system("aplay ../wav/alarm.wav")){
         throw std::runtime_error("error");
     };
+    BOOST_LOG_TRIVIAL(info) << "Alarm activated";
 }
 
 void Action::outputWarning(){
@@ -67,4 +71,5 @@ void Action::outputWarning(){
     if(0 != std::system("aplay ../wav/warning.wav")){
         throw std::runtime_error("error");
     };
+    BOOST_LOG_TRIVIAL(info) << "Warning activated";
 }

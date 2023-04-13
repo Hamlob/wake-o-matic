@@ -5,6 +5,7 @@
 #include <iostream>
 #include <chrono>
 #include <fstream>
+#include "logging.h"
 
 /// @brief Action class used to calculate and incur an audio output
 class Action {
