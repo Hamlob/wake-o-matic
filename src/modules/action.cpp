@@ -58,7 +58,7 @@ void Action::setSleepTimeBetweenActions_ms(long newTime_ms){
 }
 
 void Action::outputAlarm(){
-    std::system("amixer set PCM unmute");
+    std::system("amixer set Headphone unmute");
     // std::system("amixer set PCM 100%");
     if(0 != std::system("aplay ../wav/alarm.wav")){
         throw std::runtime_error("error");
@@ -67,7 +67,7 @@ void Action::outputAlarm(){
 }
 
 void Action::outputWarning(){
-    std::system("amixer set PCM unmute");
+    std::system("amixer set Headphone unmute");
     // std::system("amixer set PCM 100%");
     if(0 != std::system("aplay ../wav/warning.wav")){
         throw std::runtime_error("error");
