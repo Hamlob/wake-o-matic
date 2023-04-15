@@ -77,7 +77,7 @@ int main() {
 	camera.registerSceneCallback(&cb);
 
 	//creates a thread with blocking video capture to call the registered callback when frame is captured
-	camera.start();
+	camera.start(0,200);
 
 	std::cout << "Camera started" << std::endl;
 
