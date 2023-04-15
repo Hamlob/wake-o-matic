@@ -3,12 +3,12 @@
 
 using namespace cv;
 
-class eyeStatus
+class EyeStatus
 {
 public:
     bool detect(Mat image);
 
-    eyeStatus() {
+    EyeStatus() {
         // Setup SimpleBlobDetector parameters.
         SimpleBlobDetector::Params params;
 

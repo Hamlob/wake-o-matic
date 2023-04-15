@@ -30,6 +30,7 @@ public:
 	 **/
 	Camera() = default;
 
+
 	/**
 	 * Starts the acquisition from the camera
 	 * and then the callback is called at the framerate.
