@@ -48,12 +48,20 @@ jobs:
           install-deps: false
           ENABLE_PRECOMPILED_HEADERS: false
 
+      # Installs boost for logging functionality
+      - name: Install boost
+        run: |
+            sudo apt-get update
+            sudo apt-get install -yq libboost-all-dev 
+            
       # Runs a single command using the runners shell
       - name: Try building the project
         run: |
-          cd bin
-          cmake ..
+          cd bin/
+          cmake .. -DCMAKE_BUILD_TYPE=$BUILD_TYPE -DBoost_INCLUDE_DIR=${{steps.install-boost.outputs.BOOST_ROOT}}/include\ -DBoost_LIBRARY_DIRS=${{steps.install-boost.outputs.BOOST_ROOT}}/lib
           cmake --build .
+        env:
+          BOOST_ROOT: ${{ steps.install-boost.outputs.BOOST_ROOT }}
 
       # Runs a set of commands using the runners shell
       - name: Run the test program

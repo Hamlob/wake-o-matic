@@ -10,6 +10,7 @@
 #include "actionStateMachine.h"
 #include <mutex>
 #include <condition_variable>
+#include "modules/logging.h"
 
 using namespace std;
 using namespace cv;
@@ -54,6 +55,9 @@ struct MyCallback : Camera::SceneCallback {
 
 
 int main() {
+
+  init_logging();
+  BOOST_LOG_TRIVIAL(info) << "Logging Started";
 
 	//create camera object for capturing frames in a separate thread
 	Camera camera;

@@ -9,12 +9,20 @@ project (
 )
 
 #Define the used cmake standards
-set(CMAKE_CXX_STANDARD 11)
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14 -pthread")
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++20 -pthread -DBOOST_LOG_DYN_LINK")
 
 #include OpenCV library
 find_package( OpenCV REQUIRED)
 include_directories( ${OpenCV_INCLUDE_DIRS})
+
+#include OpenMP
+find_package(OpenMP)
+
+#include BOOST library
+ADD_DEFINITIONS(-DBOOST_LOG_DYN_LINK)
+find_package(Boost 1.71 REQUIRED COMPONENTS thread log log_setup program_options)
+include_directories(${Boost_INCLUDE_DIRS})
 
 #include(cmake/StandardSettings.cmake)
 #include(cmake/StaticAnalyzers.cmake)

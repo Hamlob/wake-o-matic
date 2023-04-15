@@ -1,5 +1,8 @@
-# Wake-o-matic
-Microsleep and drowsiness detection for drivers using Raspberry Pi 4. Uses openCV library for eye recognition.
+<p align="center" style="margin-bottom: 0px !important;">
+    <img width="200" src="https://raw.githubusercontent.com/Hamlob/wake-o-matic/e1107be7e28d248bb5c01b58180b3d375b0f93ae/docs/img/logo_vector.svg" alt="Wake-o-matic logo" align="center">
+</p>
+<h1 align="center" style="margin-top: 0px;">Wake-o-matic</h1>
+<p align="center" >Microsleep and drowsiness detection for drivers using Raspberry Pi 4. Uses openCV library for eye recognition.</p>
 
 ## Follow Us!
 [Check out our Linktree](https://linktr.ee/wakeomatic) for all of our social medias!
@@ -20,6 +23,9 @@ The open-ended assignment brief is to develop a real-time solution to a problem,
 ### Requirements
 This project is designed to be deployed under the following requirements, and has only been tested as such; however you may find ways to make it work on other systems.
 * [Raspberry Pi](https://www.raspberrypi.com/products/raspberry-pi-3-model-b-plus/) (model 3B+ or newer) and compatible power supply
+    - With OpenCV installed
+    - Boost installed (V1.71)
+    - CMake installed
 * [Night vision camera module](https://shop.pimoroni.com/products/night-vision-camera-module-for-raspberry-pi), we recommend the 70° lens, but both work
 * [Raspberry Pi OS](https://www.raspberrypi.com/software/operating-systems/) (aka Raspian) 5.10 or newer
 * An audio amplifier/speaker compatible with rpi, [like this one](https://shop.pimoroni.com/products/adafruit-stemma-speaker-plug-and-play-audio-amplifier), along with the necessary cables to connect everything
