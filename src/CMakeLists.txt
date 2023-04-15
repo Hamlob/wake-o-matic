@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.16)
 
 set(MAIN_SOURCE_FILES main.cpp)
-set(CUSTOM_LINK_LIBRARIES ${Boost_LIBS} ${Boost_LOG_LIBRARY} ${Boost_LOG_SETUP_LIBRARY} ${OpenMP_LIBS})
+set(CUSTOM_LINK_LIBRARIES ${Boost_LIBS} ${Boost_LOG_LIBRARY} ${Boost_LOG_SETUP_LIBRARY} ${OpenMP_LIBS} ${OpenCV_LIBS})
 
 add_subdirectory(modules)
 
@@ -9,7 +9,7 @@ add_subdirectory(modules)
 # when other libraries or executables link to wake-o-matic
 
 add_executable(wake-o-matic-main ${MAIN_SOURCE_FILES})
-set_target_properties(wake-o-matic-main PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}")
+set_target_properties(wake-o-matic-main PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR})
 
 target_include_directories (wake-o-matic-main PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 
