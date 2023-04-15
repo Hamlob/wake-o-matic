@@ -45,8 +45,11 @@ public:
 
 		//declaring a CascadeClassifier object for eyes and face and loading appropriate haarcascades//
 		
-		face_cascade.load("C:/opencv/sources/data/haarcascades/haarcascade_frontalface_alt.xml");
-		eyes_cascade.load("C:/opencv/sources/data/haarcascades/haarcascade_eye.xml");
+		face_cascade.load("../data/haarcascade_frontalface_alt.xml");
+		eyes_cascade.load("../data/haarcascade_eye.xml");
+
+		// face_cascade.load("/usr/share/opencv/haarcascades/haarcascade_frontalface_alt.xml");
+		// eyes_cascade.load("/usr/share/opencv/haarcascades/haarcascade_eye.xml");
 		
 
 	}
