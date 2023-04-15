@@ -42,22 +42,15 @@ public:
 	//create eye detection and eye status objects, and cascade classifier objects
 	FrameProcessor(){
 
-
 		//declaring a CascadeClassifier object for eyes and face and loading appropriate haarcascades//
 		std::cout << "loading cascades" << std::endl;
-		face_cascade.load("../data/haarcascade_frontalface_alt.xml");
-		eyes_cascade.load("../data/haarcascade_eye.xml");
+		face_cascade.load("../src/data/haarcascade_frontalface_alt.xml");
+		eyes_cascade.load("../src/data/haarcascade_eye.xml");
 		if(!face_cascade.empty() && !eyes_cascade.empty()){
 			std::cout << "loaded cascades" << std::endl;
 		}else{
 			std::cout << "problem loading cascades" << std::endl;
 		}
-
-
-		// face_cascade.load("/usr/share/opencv/haarcascades/haarcascade_frontalface_alt.xml");
-		// eyes_cascade.load("/usr/share/opencv/haarcascades/haarcascade_eye.xml");
-		
-
 	}
 
 private:
