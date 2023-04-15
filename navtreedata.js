@@ -26,17 +26,17 @@ var NAVTREE =
 [
   [ "wake-o-matic", "index.html", [
     [ "Classes", "annotated.html", [
-      [ "Follow Us!", "index.html#autotoc_md0", null ],
-      [ "About the Project", "index.html#autotoc_md1", null ],
-      [ "Why are we doing this?", "index.html#autotoc_md2", null ],
-      [ "Getting Started", "index.html#autotoc_md3", [
-        [ "Requirements", "index.html#autotoc_md4", null ],
-        [ "Installation", "index.html#autotoc_md5", null ],
-        [ "Run Wake-o-matic", "index.html#autotoc_md6", null ],
-        [ "Running the tests (not required)", "index.html#autotoc_md7", null ]
+      [ "Follow Us!", "index.html#autotoc_md1", null ],
+      [ "About the Project", "index.html#autotoc_md2", null ],
+      [ "Why are we doing this?", "index.html#autotoc_md3", null ],
+      [ "Getting Started", "index.html#autotoc_md4", [
+        [ "Requirements", "index.html#autotoc_md5", null ],
+        [ "Installation", "index.html#autotoc_md6", null ],
+        [ "Run Wake-o-matic", "index.html#autotoc_md7", null ],
+        [ "Running the tests (not required)", "index.html#autotoc_md8", null ]
       ] ],
-      [ "File Structure", "index.html#autotoc_md8", null ],
-      [ "Founders", "index.html#autotoc_md9", null ],
+      [ "File Structure", "index.html#autotoc_md9", null ],
+      [ "Founders", "index.html#autotoc_md10", null ],
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],
       [ "Class Members", "functions.html", [
