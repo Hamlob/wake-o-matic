@@ -10,6 +10,9 @@
 #include "actionStateMachine.h"
 #include "tests.h"
 
+//uncomment for testing on actual device, commented out for github CI since the github server does not have access to camera, so the test would always fail
+//#define CAMERA_TEST_ON
+
 using namespace std;
 using namespace cv;
 
@@ -54,8 +57,10 @@ struct MyCallback : Camera::SceneCallback {
 
 int main() {
 
+	#ifdef CAMERA_TEST_ON
 	cameraTest();
-
+	#endif
+	
 	eyeStatusTest();
 
 	frameProcessorTest();
