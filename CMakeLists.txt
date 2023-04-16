@@ -12,6 +12,11 @@ project (
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++20 -pthread -DBOOST_LOG_DYN_LINK")
 
+set(CMAKE_THREAD_LIBS_INIT "-lpthread")
+set(CMAKE_HAVE_THREADS_LIBRARY 1)
+set(CMAKE_USE_PTHREADS_INIT 1)
+set(THREADS_PREFER_PTHREAD_FLAG ON)
+
 #include OpenCV library
 find_package( OpenCV REQUIRED)
 include_directories( ${OpenCV_INCLUDE_DIRS})
