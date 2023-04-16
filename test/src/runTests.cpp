@@ -9,6 +9,7 @@
 #include "sleepDetect.h"
 #include "actionStateMachine.h"
 #include "tests.h"
+#include "cppTests.h"
 
 //uncomment for testing on actual device, commented out for github CI since the github server does not have access to camera, so the test would always fail
 //#define CAMERA_TEST_ON
@@ -54,8 +55,14 @@ struct MyCallback : Camera::SceneCallback {
 };
 
 
-
+/**
+ * @brief Test runner
+ * Optional run_test program to execute each test method. 
+ * Alternatively, CTest can be configured to compile individual tests 
+ * and run the test methods directly.
+ */
 int main() {
+    std::cout << "Tests started!" << std::endl;
 
 	#ifdef CAMERA_TEST_ON
 	cameraTest();
@@ -65,5 +72,14 @@ int main() {
 
 	frameProcessorTest();
 
-	return 0;
+
+
+
+    test_sleeping_flag_set();
+    test_warning_flag_set();
+    test_listener_triggered_by_sleeping();
+    test_listener_triggered_by_warning();
+
+    std::cout << "Tests (4) succeeded!" << std::endl;
+    return 0; // You can put a 1 here to see later that it would generate an error
 }
