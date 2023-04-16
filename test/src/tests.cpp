@@ -12,8 +12,11 @@ void cameraTest() {
 }
 
 void eyeStatusTest() {
-	cv::Mat closed = cv::imread("../images/eyeClosed.jpg");
-	cv::Mat open = cv::imread("../images/eyeOpen.jpg");
+	cv::Mat closed = cv::imread("../../../test/images/eyeClosed.jpg");
+	cv::Mat open = cv::imread("../../../test/images/eyeOpen.jpg");
+	
+	assertm(!closed.empty(), "Image of a closed eye is empty");
+	assertm(!open.empty(), "Image of an open eye is empty");
 
 	EyeStatus blinkDetector;
 
@@ -28,11 +31,11 @@ void eyeStatusTest() {
 
 void frameProcessorTest() {
 
-	cv::Mat noface = cv::imread("../images/noface.jpg");
-	cv::Mat face_closedeyes = cv::imread("../images/face_closedeyes.jpg");
-	cv::Mat face_openeyes = cv::imread("../images/face_openeyes.jpg");
+	cv::Mat noface = cv::imread("../../../test/images/noface.jpg");
+	cv::Mat face_closedeyes = cv::imread("../../../test/images/face_closedeyes.jpg");
+	cv::Mat face_openeyes = cv::imread("../../../test/images/face_openeyes.jpg");
 
-	FrameProcessor frameProcessor;
+	FrameProcessor frameProcessor("../../../src/data/haarcascade_frontalface_alt.xml","../../../src/data/haarcascade_eye.xml");
 
 	int statusNoFace = frameProcessor.processFrame(noface);
 	int statusClosedEyes = frameProcessor.processFrame(face_closedeyes);
