@@ -72,12 +72,9 @@ int main() {
 	eyeStatusTest();
 
 	frameProcessorTest();
-	
 	#ifdef ACTION_LOGGING_TEST_ON
-    	test_sleeping_flag_set();
-    	test_warning_flag_set();
-    	test_listener_triggered_by_sleeping();
-    	test_listener_triggered_by_warning();
+    test_action_activated_by_state_sleeping();
+	test_action_deactivated_by_state_awake();
 	#endif
 
     std::cout << "Tests (4) succeeded!" << std::endl;

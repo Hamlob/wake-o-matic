@@ -1,8 +1,14 @@
+#pragma once
+
+#ifdef USE_LOGGING
 #include <boost/log/core.hpp>
 #include <boost/log/trivial.hpp>
 #include <boost/log/expressions.hpp>
 #include <boost/log/utility/setup/file.hpp>
 #include <boost/log/utility/setup/common_attributes.hpp>
+#endif
+#include <string>
+#include <iostream>
 
 /**
  * @brief Initialise log file using Boost
@@ -16,4 +22,32 @@
  * 
  * SEVERITY levels include: `trace`, `debug`, `info`, `warning`, `error`, `fatal`.
  */
-void init_logging();
+class Logger{
+    public:
+        Logger(){
+            #ifdef USE_LOGGING
+            BOOST_LOG_ATTRIBUTE_KEYWORD(severity, "Severity", custom_severity_level); // link enum to boost severity_level
+            
+            logging::add_file_log
+            (
+                keywords::file_name = "logger.log",
+                keywords::format = "[%TimeStamp%] [%ThreadID%] [%Severity%] %Message%"
+            );
+
+            logging::core::get()->set_filter
+            (
+                logging::trivial::severity >= logging::trivial::info
+            );
+
+            logging::add_common_attributes();
+            #endif
+        }
+
+        enum custom_severity_level{
+            info,
+            error,
+            warning
+        };
+
+        static void logMessage(custom_severity_level severity, const char* msg);
+};

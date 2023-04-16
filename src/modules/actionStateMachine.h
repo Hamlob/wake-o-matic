@@ -25,6 +25,10 @@ public:
 	 */
 	void changeState(int state);
 
+	int getState(){
+		return currentState;
+	}
+
 	ActionStateMachine() = default;
 
 private:

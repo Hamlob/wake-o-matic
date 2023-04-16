@@ -1,7 +1,11 @@
 cmake_minimum_required(VERSION 3.16)
 
 set(MAIN_SOURCE_FILES main.cpp)
-set(CUSTOM_LINK_LIBRARIES ${Boost_LIBS} ${Boost_LOG_LIBRARY} ${Boost_LOG_SETUP_LIBRARY} ${OpenMP_LIBS} ${OpenCV_LIBS})
+set(CUSTOM_LINK_LIBRARIES ${OpenMP_LIBS} ${OpenCV_LIBS})
+
+if(SAVE_LOG)
+    set(CUSTOM_LINK_LIBRARIES ${CUSTOM_LINK_LIBRARIES} ${Boost_LIBS} ${Boost_LOG_LIBRARY} ${Boost_LOG_SETUP_LIBRARY})
+endif()
 
 add_subdirectory(modules)
 

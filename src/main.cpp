@@ -55,9 +55,8 @@ struct MyCallback : Camera::SceneCallback {
 
 
 int main() {
-
-  init_logging();
-  BOOST_LOG_TRIVIAL(info) << "Logging Started";
+	Logger MainLogger;
+	Logger::logMessage(Logger::custom_severity_level::info, "Logging Started");
 
 	//create camera object for capturing frames in a separate thread
 	Camera camera;
