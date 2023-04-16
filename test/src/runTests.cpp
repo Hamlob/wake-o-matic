@@ -13,7 +13,7 @@
 
 //uncomment for testing on actual device, commented out for github CI since the github server does not have access to camera, so the test would always fail
 //#define CAMERA_TEST_ON
-//#define ACTION_LOGGIN_TEST_ON
+#define ACTION_LOGGIN_TEST_ON
 
 using namespace std;
 using namespace cv;
