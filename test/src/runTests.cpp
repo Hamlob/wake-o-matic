@@ -2,12 +2,12 @@
 #include<opencv2/highgui/highgui.hpp>
 #include<opencv2/imgproc/imgproc.hpp>
 #include<opencv2/objdetect/objdetect.hpp>
-#include "eyeStatus.h"
-#include "camera.h" //https://github.com/berndporr/opencv-camera-callback
+#include "../../src/modules/eyeStatus.h"
+#include "../../src/modules/camera.h" //https://github.com/berndporr/opencv-camera-callback
 #include <opencv2/opencv.hpp>
-#include "frameProcessor.h"
-#include "sleepDetect.h"
-#include "actionStateMachine.h"
+#include "../../src/modules/frameProcessor.h"
+#include "../../src/modules/sleepDetect.h"
+#include "../../src/modules/actionStateMachine.h"
 #include "tests.h"
 #include "cppTests.h"
 
