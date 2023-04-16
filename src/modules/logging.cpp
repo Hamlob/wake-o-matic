@@ -20,7 +20,3 @@ void init_logging()
 
     logging::add_common_attributes();
 }
-
-void logMessage(severity_level severity, const char* msg){
-    BOOST_LOG_TRIVIAL(severity) << "Alarm Error";
-}
