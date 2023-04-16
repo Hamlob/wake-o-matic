@@ -72,9 +72,6 @@ int main() {
 
 	frameProcessorTest();
 
-
-
-
     test_sleeping_flag_set();
     test_warning_flag_set();
     test_listener_triggered_by_sleeping();
