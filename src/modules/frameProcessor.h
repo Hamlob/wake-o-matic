@@ -58,10 +58,16 @@ public:
 		}
 	}
 
-private:
-	//processes the input frame and returns a value
+	/**
+	 * @brief Analyzes the frame and returns corresponding value for open, closed eyes or driver not detected.
+	 * 
+	 * @param frame The picture of the camera containing the driver.
+	 * @return int Returns 1 if the driver has eyes open, 0 if eyes closed, and -1 if the driver is not detected.
+	 */
 	int processFrame(Mat& frame);
 
+
+private:
 	void threadLoop();
 	bool isOn = false;
 	std::thread frameProcessorThread;
