@@ -3,8 +3,8 @@
 #include<opencv2/imgproc/imgproc.hpp>
 #include<opencv2/objdetect/objdetect.hpp>
 #include "modules/eyeStatus.h"
-#include "modules/camera.h" //https://github.com/berndporr/opencv-camera-callback
-#include <opencv2/opencv.hpp>
+#include "modules/camera.h" 		//https://github.com/berndporr/opencv-camera-callback
+#include <opencv2/opencv.hpp>  		//https://github.com/opencv/opencv
 #include "modules/frameProcessor.h"
 #include "modules/sleepDetect.h"
 #include "modules/actionStateMachine.h"
