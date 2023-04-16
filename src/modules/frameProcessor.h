@@ -45,12 +45,12 @@ public:
 	void stop();
 
 	/// @brief the constructor loads the cascade classifiers and prints an error if they are not loaded correctly.
-	FrameProcessor(){
+	FrameProcessor(std::string faceCascadePath = "../src/data/haarcascade_frontalface_alt.xml", std::string eyeCascadePath = "../src/data/haarcascade_eye.xml"){
 
 		//declaring a CascadeClassifier object for eyes and face and loading appropriate haarcascades//
 		std::cout << "loading cascades" << std::endl;
-		face_cascade.load("../src/data/haarcascade_frontalface_alt.xml");
-		eyes_cascade.load("../src/data/haarcascade_eye.xml");
+		face_cascade.load(faceCascadePath);
+		eyes_cascade.load(eyeCascadePath);
 		if(!face_cascade.empty() && !eyes_cascade.empty()){
 			std::cout << "loaded cascades" << std::endl;
 		}else{
