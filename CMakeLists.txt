@@ -43,4 +43,4 @@ add_subdirectory (test)
 # install(TARGETS wake-o-matic-main)
 
 # enable_testing()
-add_test(NAME main COMMAND wake-o-matic-main)
+#add_test(NAME main COMMAND wake-o-matic-main)
