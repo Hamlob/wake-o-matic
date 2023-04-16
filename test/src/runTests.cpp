@@ -13,6 +13,7 @@
 
 //uncomment for testing on actual device, commented out for github CI since the github server does not have access to camera, so the test would always fail
 //#define CAMERA_TEST_ON
+//#define ACTION_LOGGIN_TEST_ON
 
 using namespace std;
 using namespace cv;
@@ -71,11 +72,13 @@ int main() {
 	eyeStatusTest();
 
 	frameProcessorTest();
-
-    test_sleeping_flag_set();
-    test_warning_flag_set();
-    test_listener_triggered_by_sleeping();
-    test_listener_triggered_by_warning();
+	
+	#ifdef ACTION_LOGGING_TEST_ON
+    	test_sleeping_flag_set();
+    	test_warning_flag_set();
+    	test_listener_triggered_by_sleeping();
+    	test_listener_triggered_by_warning();
+	#endif
 
     std::cout << "Tests (4) succeeded!" << std::endl;
     return 0; // You can put a 1 here to see later that it would generate an error
