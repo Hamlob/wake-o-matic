@@ -3,11 +3,18 @@
 
 using namespace cv;
 
+/// @brief Class that detect whether the eyes are open or closed. Change the parameters in constructor to fine tune.
 class EyeStatus
 {
 public:
+
+    /** @brief A function that decides whether the eye is open or closed. To do so it looks for an iris (circle) in the picture provided.
+     * @param image A picture of an eye. It should only contain the eye, not the whole face.
+     * @return True if eye is open (iris is found), false if closed (iris not found).
+    */
     bool detect(Mat image);
 
+    /// @brief Constructor is a wrapped for SimpleBlobDetector class by openCV. It sets the paramaters and calls the detector. 
     EyeStatus() {
         // Setup SimpleBlobDetector parameters.
         SimpleBlobDetector::Params params;

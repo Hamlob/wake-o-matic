@@ -26,20 +26,25 @@ extern std::mutex status_mutex;
 extern std::condition_variable status_cv;
 extern bool loading;
 
+/**
+ * @brief The frameProcessor class handles the detection of the driver eye status.
+ * It runs in a separate thread and waits for the frames from the camera.
+ * When a frame is ready, it detects the positions of the eyes and calls @see eyeStatus class with the images of just the eyes.
+ * Depends on the output of the eyeStatus, the frameProcessor stores the status of the eyes for each frame in global queue.
+ * It also handles the case where no face is detected, or no eyes are detected but face is.
+ * The values stored in queue are 1 for eyes open, 0 for eyes closed/not found, -1 for no face detected.
+ */
 class FrameProcessor
 {
 public:
 
-	//debuggin only, displays the frame
-	//void displayFrame();
-
-	//starts the thread for processing frames
+	/// @brief Starts the frameProcessing in separate thread
 	void start();
 
-	//stops the processing thread
+	/// @brief Stops the frame processing thread.
 	void stop();
 
-	//create eye detection and eye status objects, and cascade classifier objects
+	/// @brief the constructor loads the cascade classifiers and prints an error if they are not loaded correctly.
 	FrameProcessor(){
 
 		//declaring a CascadeClassifier object for eyes and face and loading appropriate haarcascades//
