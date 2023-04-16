@@ -21,7 +21,7 @@ find_package(OpenMP)
 
 #include BOOST library
 ADD_DEFINITIONS(-DBOOST_LOG_DYN_LINK)
-find_package(Boost 1.67 REQUIRED COMPONENTS thread log log_setup program_options)
+find_package(Boost 1.67.0 REQUIRED COMPONENTS thread log log_setup program_options)
 include_directories(${Boost_INCLUDE_DIRS})
 
 #include(cmake/StandardSettings.cmake)
