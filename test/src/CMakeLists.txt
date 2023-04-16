@@ -9,6 +9,7 @@ target_include_directories(wake-o-matic-tests PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}
 
 add_executable(wake-o-matic-tester ${TEST_EXECUTABLE} ${TEST_SOURCE_FILES})
 
-target_link_libraries(wake-o-matic-tester LINK_PUBLIC wake-o-matic-tests wake-o-matic-modules ${CUSTOM_LINK_LIBRARIES}))
+target_link_libraries(wake-o-matic-tester LINK_PUBLIC wake-o-matic-tests wake-o-matic-modules)
+target_link_libraries(wake-o-matic-tester LINK_PUBLIC ${Boost_LIBS} ${Boost_LOG_LIBRARY} ${Boost_LOG_SETUP_LIBRARY} ${OpenMP_LIBS})
 
 add_test(NAME unitTests COMMAND wake-o-matic-tester)
