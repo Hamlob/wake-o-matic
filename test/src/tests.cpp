@@ -12,8 +12,8 @@ void cameraTest() {
 }
 
 void eyeStatusTest() {
-	cv::Mat closed = cv::imread("eyeClosed.jpg");
-	cv::Mat open = cv::imread("eyeOpen.jpg");
+	cv::Mat closed = cv::imread("../images/eyeClosed.jpg");
+	cv::Mat open = cv::imread("../images/eyeOpen.jpg");
 
 	EyeStatus blinkDetector;
 
@@ -28,9 +28,9 @@ void eyeStatusTest() {
 
 void frameProcessorTest() {
 
-	cv::Mat noface = cv::imread("noface.jpg");
-	cv::Mat face_closedeyes = cv::imread("face_closedeyes.jpg");
-	cv::Mat face_openeyes = cv::imread("face_openeyes.jpg");
+	cv::Mat noface = cv::imread("../images/noface.jpg");
+	cv::Mat face_closedeyes = cv::imread("../images/face_closedeyes.jpg");
+	cv::Mat face_openeyes = cv::imread("../images/face_openeyes.jpg");
 
 	FrameProcessor frameProcessor;
 
