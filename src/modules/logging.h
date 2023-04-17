@@ -22,7 +22,11 @@
  * 
  * See https://www.boost.org/ for more information on Boost
  * 
+<<<<<<< HEAD
  * ### USAGE:
+=======
+ * ### Usage
+>>>>>>> origin/capture_and_detect
  *      Logger myLogger;
  *      myLogger.logMessage(SEVERITY, MSG)
  * 
