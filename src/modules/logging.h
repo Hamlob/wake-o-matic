@@ -11,16 +11,22 @@
 #include <iostream>
 
 /**
- * @brief Initialise log file using Boost
+ * @brief Class to handle log file using Boost
+ * When setting up cmake, set custom flag `-DSAVE_LOG`:
+ *      cmake .. -DSAVE_LOG=true
+ * 
+ * If this flag is not set, Logger will not use boost and will print any log messages.
+ * 
+ * If flag set:
  * Configured to write to log file "logger.log" in build directory.
  * 
  * See https://www.boost.org/ for more information on Boost
  * 
- * ### Usage
+ * ### USAGE:
+ *      Logger myLogger;
+ *      myLogger.logMessage(SEVERITY, MSG)
  * 
- *      BOOST_LOG_TRIVIAL(SEVERITY) << "This is a log message"
- * 
- * SEVERITY levels include: `trace`, `debug`, `info`, `warning`, `error`, `fatal`.
+ * `SEVERITY` levels include: `trace`, `debug`, `info`, `warning`, `error`, `fatal`.
  */
 class Logger{
     public:
@@ -43,11 +49,19 @@ class Logger{
             #endif
         }
 
+        /// @brief Custom enum that corresponds to boost severity levels. Can also be used without using boost
         enum custom_severity_level{
             info,
             error,
             warning
         };
 
+        /**
+         * @brief Write a message to log file if USE_LOGGING flag is enabled.
+         * Prints message to console if logging disabled
+         * 
+         * @param severity Logger::custom_severity_level
+         * @param msg 
+         */
         static void logMessage(custom_severity_level severity, const char* msg);
 };

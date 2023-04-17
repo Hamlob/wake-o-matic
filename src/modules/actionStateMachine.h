@@ -25,6 +25,11 @@ public:
 	 */
 	void changeState(int state);
 
+	/**
+	 * @brief Get the current state
+	 * 
+	 * @return int current state
+	 */
 	int getState(){
 		return currentState;
 	}
