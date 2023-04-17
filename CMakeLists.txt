@@ -25,9 +25,12 @@ include_directories( ${OpenCV_INCLUDE_DIRS})
 find_package(OpenMP)
 
 #include BOOST library
-ADD_DEFINITIONS(-DBOOST_LOG_DYN_LINK)
-find_package(Boost REQUIRED COMPONENTS thread log log_setup program_options)
-include_directories(${Boost_INCLUDE_DIRS})
+if(SAVE_LOG)
+    ADD_DEFINITIONS(-DBOOST_LOG_DYN_LINK)
+    find_package(Boost REQUIRED COMPONENTS thread log log_setup program_options)
+    include_directories(${Boost_INCLUDE_DIRS})
+    set(CMAKE_CXX_FLAGS "{CMAKE_CXX_FLAGS} -DUSE_LOGGING -DBOOST_LOG_DYN_LINK -lboost_log -lboost_thread -lboost_system -lboost_log_setup")
+endif()
 
 #include(cmake/StandardSettings.cmake)
 #include(cmake/StaticAnalyzers.cmake)
