@@ -44,7 +44,12 @@ public:
 	/// @brief Stops the frame processing thread.
 	void stop();
 
-	/// @brief the constructor loads the cascade classifiers and prints an error if they are not loaded correctly.
+	/**
+	 * @brief The constructor loads the cascade classifiers and prints an error if they are not loaded correctly.
+	 * 
+	 * @param faceCascadePath Path to the face cascade file
+	 * @param eyeCascadePath Path to the eye cascade file
+	 */
 	FrameProcessor(std::string faceCascadePath = "../src/data/haarcascade_frontalface_alt.xml", std::string eyeCascadePath = "../src/data/haarcascade_eye.xml"){
 
 		//declaring a CascadeClassifier object for eyes and face and loading appropriate haarcascades//

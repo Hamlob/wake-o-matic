@@ -17,10 +17,10 @@
  * See https://www.boost.org/ for more information on Boost
  * 
  * ### Usage
+ *      Logger myLogger;
+ *      myLogger.logMessage(SEVERITY, MSG)
  * 
- *      BOOST_LOG_TRIVIAL(SEVERITY) << "This is a log message"
- * 
- * SEVERITY levels include: `trace`, `debug`, `info`, `warning`, `error`, `fatal`.
+ * `SEVERITY` levels include: `trace`, `debug`, `info`, `warning`, `error`, `fatal`.
  */
 class Logger{
     public:
@@ -43,6 +43,7 @@ class Logger{
             #endif
         }
 
+        /// @brief Custom enum that corresponds to boost severity levels. Can also be used without using boost
         enum custom_severity_level{
             info,
             error,
