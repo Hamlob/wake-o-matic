@@ -10,17 +10,27 @@ project (
 
 #Define the used cmake standards
 set(CMAKE_CXX_STANDARD 20)
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++20 -pthread -DBOOST_LOG_DYN_LINK")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++2a -pthread -lstdc++")
 
-#include cppunit library
+set(CMAKE_THREAD_LIBS_INIT "-lpthread")
+set(CMAKE_HAVE_THREADS_LIBRARY 1)
+set(CMAKE_USE_PTHREADS_INIT 1)
+set(THREADS_PREFER_PTHREAD_FLAG ON)
+
+#include OpenCV library
+find_package( OpenCV REQUIRED)
+include_directories( ${OpenCV_INCLUDE_DIRS})
 
 #include OpenMP
 find_package(OpenMP)
 
 #include BOOST library
-ADD_DEFINITIONS(-DBOOST_LOG_DYN_LINK)
-find_package(Boost 1.71 REQUIRED COMPONENTS thread log log_setup program_options)
-include_directories(${Boost_INCLUDE_DIRS})
+if(SAVE_LOG)
+    ADD_DEFINITIONS(-DBOOST_LOG_DYN_LINK)
+    find_package(Boost REQUIRED COMPONENTS thread log log_setup program_options)
+    include_directories(${Boost_INCLUDE_DIRS})
+    set(CMAKE_CXX_FLAGS "{CMAKE_CXX_FLAGS} -DUSE_LOGGING -DBOOST_LOG_DYN_LINK -lboost_log -lboost_thread -lboost_system -lboost_log_setup")
+endif()
 
 #include(cmake/StandardSettings.cmake)
 #include(cmake/StaticAnalyzers.cmake)
@@ -36,4 +46,4 @@ add_subdirectory (test)
 # install(TARGETS wake-o-matic-main)
 
 # enable_testing()
-add_test(NAME main COMMAND wake-o-matic-main)
+#add_test(NAME main COMMAND wake-o-matic-main)
