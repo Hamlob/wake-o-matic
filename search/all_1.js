@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['cpptests_2ecpp_7',['cppTests.cpp',['../cppTests_8cpp.html',1,'']]],
-  ['cpptests_2eh_8',['cppTests.h',['../cppTests_8h.html',1,'']]]
+  ['buffersize_8',['bufferSize',['../classSleepDetect.html#aae8d7b3ab4ef95869a907cdf0bd95709',1,'SleepDetect']]]
 ];

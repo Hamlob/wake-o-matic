@@ -86,21 +86,83 @@ $(document).ready(function(){initNavTree('runTests_8cpp.html',''); initResizable
 
 <div class="header">
   <div class="summary">
-<a href="#func-members">Functions</a>  </div>
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#define-members">Macros</a> &#124;
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">runTests.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;iostream&gt;</code><br />
-<code>#include &lt;cassert&gt;</code><br />
+<code>#include &lt;opencv2/highgui/highgui.hpp&gt;</code><br />
+<code>#include &lt;opencv2/imgproc/imgproc.hpp&gt;</code><br />
+<code>#include &lt;opencv2/objdetect/objdetect.hpp&gt;</code><br />
+<code>#include &quot;<a class="el" href="eyeStatus_8h_source.html">../../src/modules/eyeStatus.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="camera_8h_source.html">../../src/modules/camera.h</a>&quot;</code><br />
+<code>#include &lt;opencv2/opencv.hpp&gt;</code><br />
+<code>#include &quot;<a class="el" href="frameProcessor_8h_source.html">../../src/modules/frameProcessor.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="sleepDetect_8h_source.html">../../src/modules/sleepDetect.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="actionStateMachine_8h_source.html">../../src/modules/actionStateMachine.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="tests_8h_source.html">tests.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="cppTests_8h_source.html">cppTests.h</a>&quot;</code><br />
 </div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structMyCallback.html">MyCallback</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a46526bbcbbdb7f16e05468abe5343744"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="runTests_8cpp.html#a46526bbcbbdb7f16e05468abe5343744">ACTION_LOGGIN_TEST_ON</a></td></tr>
+<tr class="separator:a46526bbcbbdb7f16e05468abe5343744"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="runTests_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
 <tr class="memdesc:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test runner Optional run_test program to execute each test method.  <a href="runTests_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">More...</a><br /></td></tr>
 <tr class="separator:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:afa9d9fb4eb840caa0481cd8851d5a401"><td class="memItemLeft" align="right" valign="top">std::queue&lt; Mat &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="runTests_8cpp.html#afa9d9fb4eb840caa0481cd8851d5a401">frame_queue</a></td></tr>
+<tr class="separator:afa9d9fb4eb840caa0481cd8851d5a401"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c73d85205c960ff2338946c6ebf0c6f"><td class="memItemLeft" align="right" valign="top">std::mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="runTests_8cpp.html#a2c73d85205c960ff2338946c6ebf0c6f">frame_mutex</a></td></tr>
+<tr class="separator:a2c73d85205c960ff2338946c6ebf0c6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6025f90eef0f938ad193dfb7ba0b3f2"><td class="memItemLeft" align="right" valign="top">std::condition_variable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="runTests_8cpp.html#ab6025f90eef0f938ad193dfb7ba0b3f2">frame_cv</a></td></tr>
+<tr class="separator:ab6025f90eef0f938ad193dfb7ba0b3f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a0115d3c31ef3657b197ace2c06496e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="runTests_8cpp.html#a7a0115d3c31ef3657b197ace2c06496e">processed</a> = 1</td></tr>
+<tr class="separator:a7a0115d3c31ef3657b197ace2c06496e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d57ddd12308d5076ca7b884f63e2fb8"><td class="memItemLeft" align="right" valign="top">std::queue&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="runTests_8cpp.html#a8d57ddd12308d5076ca7b884f63e2fb8">status_queue</a></td></tr>
+<tr class="separator:a8d57ddd12308d5076ca7b884f63e2fb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00179e5856ab134fcf8b5d467f96a064"><td class="memItemLeft" align="right" valign="top">std::mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="runTests_8cpp.html#a00179e5856ab134fcf8b5d467f96a064">status_mutex</a></td></tr>
+<tr class="separator:a00179e5856ab134fcf8b5d467f96a064"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c4720181ed75663ccf3cb372e20ab96"><td class="memItemLeft" align="right" valign="top">std::condition_variable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="runTests_8cpp.html#a6c4720181ed75663ccf3cb372e20ab96">status_cv</a></td></tr>
+<tr class="separator:a6c4720181ed75663ccf3cb372e20ab96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a933cb359b48604312fe54611b2fa7873"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="runTests_8cpp.html#a933cb359b48604312fe54611b2fa7873">loading</a> = 0</td></tr>
+<tr class="separator:a933cb359b48604312fe54611b2fa7873"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc0cee1bb501f2cc0a139644163ae08c"><td class="memItemLeft" align="right" valign="top">std::mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="runTests_8cpp.html#afc0cee1bb501f2cc0a139644163ae08c">action_mutex</a></td></tr>
+<tr class="separator:afc0cee1bb501f2cc0a139644163ae08c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91bb172db9b5599dddc0f1e2dac876db"><td class="memItemLeft" align="right" valign="top">std::condition_variable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="runTests_8cpp.html#a91bb172db9b5599dddc0f1e2dac876db">action_cv</a></td></tr>
+<tr class="separator:a91bb172db9b5599dddc0f1e2dac876db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9dca2ba355fbb4f1d7d22d93f1b19326"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="runTests_8cpp.html#a9dca2ba355fbb4f1d7d22d93f1b19326">sleepStatus</a> = <a class="el" href="sleepDetect_8h.html#a6767b81ad248865d0e3b9d0b851f5a11">NOFACE</a></td></tr>
+<tr class="separator:a9dca2ba355fbb4f1d7d22d93f1b19326"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a46526bbcbbdb7f16e05468abe5343744"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46526bbcbbdb7f16e05468abe5343744">&#9670;&nbsp;</a></span>ACTION_LOGGIN_TEST_ON</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ACTION_LOGGIN_TEST_ON</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="ae66f6b31b5ad750f1fe042a706a4e3d4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae66f6b31b5ad750f1fe042a706a4e3d4">&#9670;&nbsp;</a></span>main()</h2>
@@ -119,6 +181,161 @@ Functions</h2></td></tr>
 
 <p>Test runner Optional run_test program to execute each test method. </p>
 <p>Alternatively, CTest can be configured to compile individual tests and run the test methods directly. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="a91bb172db9b5599dddc0f1e2dac876db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91bb172db9b5599dddc0f1e2dac876db">&#9670;&nbsp;</a></span>action_cv</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::condition_variable action_cv</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afc0cee1bb501f2cc0a139644163ae08c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc0cee1bb501f2cc0a139644163ae08c">&#9670;&nbsp;</a></span>action_mutex</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::mutex action_mutex</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab6025f90eef0f938ad193dfb7ba0b3f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6025f90eef0f938ad193dfb7ba0b3f2">&#9670;&nbsp;</a></span>frame_cv</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::condition_variable frame_cv</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2c73d85205c960ff2338946c6ebf0c6f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c73d85205c960ff2338946c6ebf0c6f">&#9670;&nbsp;</a></span>frame_mutex</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::mutex frame_mutex</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afa9d9fb4eb840caa0481cd8851d5a401"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa9d9fb4eb840caa0481cd8851d5a401">&#9670;&nbsp;</a></span>frame_queue</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::queue&lt;Mat&gt; frame_queue</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a933cb359b48604312fe54611b2fa7873"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a933cb359b48604312fe54611b2fa7873">&#9670;&nbsp;</a></span>loading</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool loading = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7a0115d3c31ef3657b197ace2c06496e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a0115d3c31ef3657b197ace2c06496e">&#9670;&nbsp;</a></span>processed</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool processed = 1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9dca2ba355fbb4f1d7d22d93f1b19326"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9dca2ba355fbb4f1d7d22d93f1b19326">&#9670;&nbsp;</a></span>sleepStatus</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int sleepStatus = <a class="el" href="sleepDetect_8h.html#a6767b81ad248865d0e3b9d0b851f5a11">NOFACE</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6c4720181ed75663ccf3cb372e20ab96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c4720181ed75663ccf3cb372e20ab96">&#9670;&nbsp;</a></span>status_cv</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::condition_variable status_cv</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a00179e5856ab134fcf8b5d467f96a064"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00179e5856ab134fcf8b5d467f96a064">&#9670;&nbsp;</a></span>status_mutex</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::mutex status_mutex</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8d57ddd12308d5076ca7b884f63e2fb8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d57ddd12308d5076ca7b884f63e2fb8">&#9670;&nbsp;</a></span>status_queue</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::queue&lt;int&gt; status_queue</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>

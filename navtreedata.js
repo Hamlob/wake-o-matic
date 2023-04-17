@@ -26,19 +26,20 @@ var NAVTREE =
 [
   [ "wake-o-matic", "index.html", [
     [ "Classes", "annotated.html", [
-      [ "Follow Us!", "index.html#autotoc_md1", null ],
-      [ "About the Project", "index.html#autotoc_md2", null ],
-      [ "Why are we doing this?", "index.html#autotoc_md3", null ],
-      [ "Getting Started", "index.html#autotoc_md4", [
-        [ "Requirements", "index.html#autotoc_md5", null ],
-        [ "Installation", "index.html#autotoc_md6", null ],
-        [ "Run Wake-o-matic", "index.html#autotoc_md7", null ],
-        [ "Running the tests (not required)", "index.html#autotoc_md8", null ]
+      [ "Follow Us!", "index.html#autotoc_md4", null ],
+      [ "About the Project", "index.html#autotoc_md5", null ],
+      [ "Why are we doing this?", "index.html#autotoc_md6", null ],
+      [ "Getting Started", "index.html#autotoc_md7", [
+        [ "Requirements", "index.html#autotoc_md8", null ],
+        [ "Installation", "index.html#autotoc_md9", null ],
+        [ "Run Wake-o-matic", "index.html#autotoc_md10", null ],
+        [ "Running the tests (not required)", "index.html#autotoc_md11", null ]
       ] ],
-      [ "File Structure", "index.html#autotoc_md9", null ],
-      [ "Founders", "index.html#autotoc_md10", null ],
+      [ "File Structure", "index.html#autotoc_md12", null ],
+      [ "Founders", "index.html#autotoc_md13", null ],
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],
+      [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],
       [ "Class Members", "functions.html", [
         [ "All", "functions.html", null ],
         [ "Functions", "functions_func.html", null ],
@@ -51,6 +52,7 @@ var NAVTREE =
       [ "File Members", "globals.html", [
         [ "All", "globals.html", null ],
         [ "Functions", "globals_func.html", null ],
+        [ "Variables", "globals_vars.html", null ],
         [ "Macros", "globals_defs.html", null ]
       ] ]
     ] ]
@@ -59,7 +61,7 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"action_8cpp.html"
+"actionStateMachine_8cpp.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

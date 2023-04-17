@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['error_10',['error',['../classAction.html#a14f1644f55d1b7f3b5fad07ffeec975aa6ac4ff3da756984aefed34e4faaa4e70',1,'Action']]]
+  ['detect_17',['detect',['../classEyeStatus.html#a1b7bc90e928d24e54a0a62e48774dd8d',1,'EyeStatus::detect()'],['../classSleepDetect.html#a29a9e8a18336537a0262f9fe7940b2a0',1,'SleepDetect::detect()']]],
+  ['dofilter_18',['doFilter',['../classFilter.html#a7b78f5d9219b632d901c806a8e4c5718',1,'Filter']]]
 ];

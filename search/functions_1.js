@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['deactivate_43',['deactivate',['../classAction.html#a3858673ad886c0fa814637e558a75867',1,'Action']]]
+  ['buffersize_103',['bufferSize',['../classSleepDetect.html#aae8d7b3ab4ef95869a907cdf0bd95709',1,'SleepDetect']]]
 ];

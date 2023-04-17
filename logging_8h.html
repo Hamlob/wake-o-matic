@@ -86,50 +86,22 @@ $(document).ready(function(){initNavTree('logging_8h.html',''); initResizable();
 
 <div class="header">
   <div class="summary">
-<a href="#func-members">Functions</a>  </div>
+<a href="#nested-classes">Classes</a>  </div>
   <div class="headertitle">
 <div class="title">logging.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;boost/log/core.hpp&gt;</code><br />
-<code>#include &lt;boost/log/trivial.hpp&gt;</code><br />
-<code>#include &lt;boost/log/expressions.hpp&gt;</code><br />
-<code>#include &lt;boost/log/utility/setup/file.hpp&gt;</code><br />
-<code>#include &lt;boost/log/utility/setup/common_attributes.hpp&gt;</code><br />
+<div class="textblock"><code>#include &lt;string&gt;</code><br />
+<code>#include &lt;iostream&gt;</code><br />
 </div>
 <p><a href="logging_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:ad8bf2ebe714bdb6a1e216ed7d9efa7a3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logging_8h.html#ad8bf2ebe714bdb6a1e216ed7d9efa7a3">init_logging</a> ()</td></tr>
-<tr class="memdesc:ad8bf2ebe714bdb6a1e216ed7d9efa7a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialise log file using Boost Configured to write to log file "logger.log" in build directory.  <a href="logging_8h.html#ad8bf2ebe714bdb6a1e216ed7d9efa7a3">More...</a><br /></td></tr>
-<tr class="separator:ad8bf2ebe714bdb6a1e216ed7d9efa7a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogger.html">Logger</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class to handle log file using Boost When setting up cmake, set custom flag <code>-DSAVE_LOG</code>: cmake .  <a href="classLogger.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Function Documentation</h2>
-<a id="ad8bf2ebe714bdb6a1e216ed7d9efa7a3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad8bf2ebe714bdb6a1e216ed7d9efa7a3">&#9670;&nbsp;</a></span>init_logging()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void init_logging </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Initialise log file using Boost Configured to write to log file "logger.log" in build directory. </p>
-<p>See <a href="https://www.boost.org/">https://www.boost.org/</a> for more information on Boost</p>
-<h3><a class="anchor" id="autotoc_md0"></a>
-Usage</h3>
-<pre class="fragment"> BOOST_LOG_TRIVIAL(SEVERITY) &lt;&lt; "This is a log message"
-</pre><p> SEVERITY levels include: <code>trace</code>, <code>debug</code>, <code>info</code>, <code>warning</code>, <code>error</code>, <code>fatal</code>. </p>
-
-</div>
-</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

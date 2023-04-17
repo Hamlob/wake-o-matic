@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['error_57',['error',['../classAction.html#a14f1644f55d1b7f3b5fad07ffeec975aa6ac4ff3da756984aefed34e4faaa4e70',1,'Action']]]
+  ['info_140',['info',['../classLogger.html#a2782222a22293344743c0c08b3873c41a531376566c0f06bf48b24aee13301d2b',1,'Logger']]]
 ];

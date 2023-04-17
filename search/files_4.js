@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['readme_2emd_38',['README.md',['../README_8md.html',1,'']]],
-  ['runtests_2ecpp_39',['runTests.cpp',['../runTests_8cpp.html',1,'']]]
+  ['logging_2ecpp_93',['logging.cpp',['../logging_8cpp.html',1,'']]],
+  ['logging_2eh_94',['logging.h',['../logging_8h.html',1,'']]]
 ];

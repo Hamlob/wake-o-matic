@@ -89,14 +89,54 @@ $(document).ready(function(){initNavTree('logging_8h_source.html',''); initResiz
 <div class="title">logging.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="logging_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &lt;boost/log/core.hpp&gt;</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &lt;boost/log/trivial.hpp&gt;</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;boost/log/expressions.hpp&gt;</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;boost/log/utility/setup/file.hpp&gt;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;boost/log/utility/setup/common_attributes.hpp&gt;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keywordtype">void</span> <a class="code" href="logging_8h.html#ad8bf2ebe714bdb6a1e216ed7d9efa7a3">init_logging</a>();</div>
-<div class="ttc" id="alogging_8h_html_ad8bf2ebe714bdb6a1e216ed7d9efa7a3"><div class="ttname"><a href="logging_8h.html#ad8bf2ebe714bdb6a1e216ed7d9efa7a3">init_logging</a></div><div class="ttdeci">void init_logging()</div><div class="ttdoc">Initialise log file using Boost Configured to write to log file &quot;logger.log&quot; in build directory.</div><div class="ttdef"><b>Definition:</b> logging.cpp:6</div></div>
+<a href="logging_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#ifdef USE_LOGGING</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;boost/log/core.hpp&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;boost/log/trivial.hpp&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;boost/log/expressions.hpp&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;boost/log/utility/setup/file.hpp&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;boost/log/utility/setup/common_attributes.hpp&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="classLogger.html">   35</a></span>&#160;<span class="keyword">class </span><a class="code" href="classLogger.html">Logger</a>{</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="classLogger.html#abc41bfb031d896170c7675fa96a6b30c">   37</a></span>&#160;        <a class="code" href="classLogger.html#abc41bfb031d896170c7675fa96a6b30c">Logger</a>(){</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">            #ifdef USE_LOGGING</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            BOOST_LOG_ATTRIBUTE_KEYWORD(severity, <span class="stringliteral">&quot;Severity&quot;</span>, <a class="code" href="classLogger.html#a2782222a22293344743c0c08b3873c41">custom_severity_level</a>); <span class="comment">// link enum to boost severity_level</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            logging::add_file_log</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            (</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                keywords::file_name = <span class="stringliteral">&quot;logger.log&quot;</span>,</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                keywords::format = <span class="stringliteral">&quot;[%TimeStamp%] [%ThreadID%] [%Severity%] %Message%&quot;</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            );</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            logging::core::get()-&gt;set_filter</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            (</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                logging::trivial::severity &gt;= logging::trivial::info</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            );</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            logging::add_common_attributes();</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="preprocessor">            #endif</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        }</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="classLogger.html#a2782222a22293344743c0c08b3873c41">   57</a></span>&#160;        <span class="keyword">enum</span> <a class="code" href="classLogger.html#a2782222a22293344743c0c08b3873c41">custom_severity_level</a>{</div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="classLogger.html#a2782222a22293344743c0c08b3873c41a531376566c0f06bf48b24aee13301d2b">   58</a></span>&#160;            <a class="code" href="classLogger.html#a2782222a22293344743c0c08b3873c41a531376566c0f06bf48b24aee13301d2b">info</a>,</div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="classLogger.html#a2782222a22293344743c0c08b3873c41abbecdd1bb4ad808f99a9ca3881431b4f">   59</a></span>&#160;            <a class="code" href="classLogger.html#a2782222a22293344743c0c08b3873c41abbecdd1bb4ad808f99a9ca3881431b4f">error</a>,</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            <a class="code" href="classLogger.html#a2782222a22293344743c0c08b3873c41a7c1bf704a636a8f1d67c445495da272a">warning</a></div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="classLogger.html#a2782222a22293344743c0c08b3873c41a7c1bf704a636a8f1d67c445495da272a">   61</a></span>&#160;        };</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classLogger.html#a85cd5aaa0ba69feb7c36130d25e5968d">logMessage</a>(<a class="code" href="classLogger.html#a2782222a22293344743c0c08b3873c41">custom_severity_level</a> severity, <span class="keyword">const</span> <span class="keywordtype">char</span>* msg);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;};</div>
+<div class="ttc" id="aclassLogger_html"><div class="ttname"><a href="classLogger.html">Logger</a></div><div class="ttdoc">Class to handle log file using Boost When setting up cmake, set custom flag -DSAVE_LOG: cmake .</div><div class="ttdef"><b>Definition:</b> logging.h:35</div></div>
+<div class="ttc" id="aclassLogger_html_a2782222a22293344743c0c08b3873c41"><div class="ttname"><a href="classLogger.html#a2782222a22293344743c0c08b3873c41">Logger::custom_severity_level</a></div><div class="ttdeci">custom_severity_level</div><div class="ttdoc">Custom enum that corresponds to boost severity levels. Can also be used without using boost.</div><div class="ttdef"><b>Definition:</b> logging.h:57</div></div>
+<div class="ttc" id="aclassLogger_html_a2782222a22293344743c0c08b3873c41a531376566c0f06bf48b24aee13301d2b"><div class="ttname"><a href="classLogger.html#a2782222a22293344743c0c08b3873c41a531376566c0f06bf48b24aee13301d2b">Logger::info</a></div><div class="ttdeci">@ info</div><div class="ttdef"><b>Definition:</b> logging.h:58</div></div>
+<div class="ttc" id="aclassLogger_html_a2782222a22293344743c0c08b3873c41a7c1bf704a636a8f1d67c445495da272a"><div class="ttname"><a href="classLogger.html#a2782222a22293344743c0c08b3873c41a7c1bf704a636a8f1d67c445495da272a">Logger::warning</a></div><div class="ttdeci">@ warning</div><div class="ttdef"><b>Definition:</b> logging.h:60</div></div>
+<div class="ttc" id="aclassLogger_html_a2782222a22293344743c0c08b3873c41abbecdd1bb4ad808f99a9ca3881431b4f"><div class="ttname"><a href="classLogger.html#a2782222a22293344743c0c08b3873c41abbecdd1bb4ad808f99a9ca3881431b4f">Logger::error</a></div><div class="ttdeci">@ error</div><div class="ttdef"><b>Definition:</b> logging.h:59</div></div>
+<div class="ttc" id="aclassLogger_html_a85cd5aaa0ba69feb7c36130d25e5968d"><div class="ttname"><a href="classLogger.html#a85cd5aaa0ba69feb7c36130d25e5968d">Logger::logMessage</a></div><div class="ttdeci">static void logMessage(custom_severity_level severity, const char *msg)</div><div class="ttdoc">Write a message to log file if USE_LOGGING flag is enabled.</div><div class="ttdef"><b>Definition:</b> logging.cpp:8</div></div>
+<div class="ttc" id="aclassLogger_html_abc41bfb031d896170c7675fa96a6b30c"><div class="ttname"><a href="classLogger.html#abc41bfb031d896170c7675fa96a6b30c">Logger::Logger</a></div><div class="ttdeci">Logger()</div><div class="ttdef"><b>Definition:</b> logging.h:37</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
