@@ -59,9 +59,9 @@ We utilise CTest, built-in with CMake, to issue our unit tests. You can run the 
 * [Ying Wang](https://github.com/MrMeerkat) - Action and logging implementation + hardware
 
 ## Project Timeline
-24.01.2023 - 17.04.2023
-Weekly stand-ups with meeting agenda and action items
-Sprint during spring break
+24.01.2023 - 17.04.2023<br>
+Weekly stand-ups with meeting agenda and action items<br>
+Sprint during spring break<br>
 
 ## Roadmap
 Here's a general roadmap of the milestones that we are working towards. You can find out more in our [release log](https://github.com/Hamlob/wake-o-matic/releases).
