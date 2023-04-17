@@ -26,18 +26,18 @@ var NAVTREE =
 [
   [ "wake-o-matic", "index.html", [
     [ "Classes", "annotated.html", [
-      [ "Follow Us!", "index.html#autotoc_md4", null ],
-      [ "About the Project", "index.html#autotoc_md5", null ],
-      [ "Why are we doing this?", "index.html#autotoc_md6", null ],
-      [ "Getting Started", "index.html#autotoc_md7", [
-        [ "Requirements", "index.html#autotoc_md8", null ],
-        [ "Installation", "index.html#autotoc_md9", null ],
-        [ "Run Wake-o-matic", "index.html#autotoc_md10", null ],
-        [ "Running the tests (not required)", "index.html#autotoc_md11", null ]
+      [ "Follow Us!", "index.html#autotoc_md3", null ],
+      [ "About the Project", "index.html#autotoc_md4", null ],
+      [ "Why are we doing this?", "index.html#autotoc_md5", null ],
+      [ "Getting Started", "index.html#autotoc_md6", [
+        [ "Requirements", "index.html#autotoc_md7", null ],
+        [ "Installation", "index.html#autotoc_md8", null ],
+        [ "Run Wake-o-matic", "index.html#autotoc_md9", null ],
+        [ "Running the tests (not required)", "index.html#autotoc_md10", null ]
       ] ],
-      [ "File Structure", "index.html#autotoc_md12", null ],
-      [ "Founders", "index.html#autotoc_md13", null ],
-      [ "Roadmap", "index.html#autotoc_md14", null ],
+      [ "File Structure", "index.html#autotoc_md11", null ],
+      [ "Founders", "index.html#autotoc_md12", null ],
+      [ "Roadmap", "index.html#autotoc_md13", null ],
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],
       [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],

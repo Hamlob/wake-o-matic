@@ -94,21 +94,21 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
 <h1 align="center" style="margin-top: 0px;">Wake-o-matic</h1>
 <p align="center"></p>
 <p>Microsleep and drowsiness detection for drivers using Raspberry Pi. Uses openCV library for eye recognition.</p>
-<h2><a class="anchor" id="autotoc_md4"></a>
+<h2><a class="anchor" id="autotoc_md3"></a>
 Follow Us!</h2>
 <p><a href="https://linktr.ee/wakeomatic">Check out our Linktree</a> for all of our social medias!</p>
 <p><a href="https://hamlob.github.io/wake-o-matic/">Visit our documentation</a> to learn how to use the project.</p>
-<h2><a class="anchor" id="autotoc_md5"></a>
+<h2><a class="anchor" id="autotoc_md4"></a>
 About the Project</h2>
 <p>Driving while drowsy is a danger that all of us are aware of, however most of us can probably think of an example of a time we took the risk in order to get to our destination. <a href="https://www.brake.org.uk/get-involved/take-action/mybrake/knowledge-centre/driver-fatigue#:~:text=Worldwide%2C%20it%20is%20estimated%20that,road%20crashes%20are%20fatigue%2Drelated.">According to road safety charity, Brake</a>, 1 in 8 drivers admit to falling asleep at the wheel, with an estimated 10-20% of UK traffic accidents being fatigue related.</p>
 <p>Of course, this project won't fix all the problems, but we aim to provide a tool to help drivers understand their limits <em>before</em> an accident occurs. Besides, who better to try to find a solution than a bunch of sleepy, final-year engineering students!</p>
-<h2><a class="anchor" id="autotoc_md6"></a>
+<h2><a class="anchor" id="autotoc_md5"></a>
 Why are we doing this?</h2>
 <p>Wake-o-Matic is project born out of a coursework assignment at the School of Engineering, University of Glasgow.</p>
 <p>The open-ended assignment brief is to develop a real-time solution to a problem, which lead us to address a problem that has affected the entire team at some point.</p>
-<h2><a class="anchor" id="autotoc_md7"></a>
+<h2><a class="anchor" id="autotoc_md6"></a>
 Getting Started</h2>
-<h3><a class="anchor" id="autotoc_md8"></a>
+<h3><a class="anchor" id="autotoc_md7"></a>
 Requirements</h3>
 <p>This project is designed to be deployed under the following requirements, and has only been tested as such; however you may find ways to make it work on other systems.</p><ul>
 <li><a href="https://www.raspberrypi.com/products/raspberry-pi-3-model-b-plus/">Raspberry Pi</a> (model 3B+ or newer) and compatible power supply<ul>
@@ -121,7 +121,7 @@ Requirements</h3>
 <li><a href="https://www.raspberrypi.com/software/operating-systems/">Raspberry Pi OS</a> (aka Raspian) (Recommended: V5.10 or newer)</li>
 <li>An audio amplifier/speaker compatible with rpi, <a href="https://shop.pimoroni.com/products/adafruit-stemma-speaker-plug-and-play-audio-amplifier">like this one</a>, along with the necessary cables to connect everything</li>
 </ul>
-<h3><a class="anchor" id="autotoc_md9"></a>
+<h3><a class="anchor" id="autotoc_md8"></a>
 Installation</h3>
 <ol type="1">
 <li>Clone the repository in a convenient location</li>
@@ -129,16 +129,16 @@ Installation</h3>
 <li><code>cmake ..</code> Note: if you would like to include the debug log when you run the code, add the <code>-DSAVE_LOG</code> flag.</li>
 <li><code>cmake --build .</code></li>
 </ol>
-<h3><a class="anchor" id="autotoc_md10"></a>
+<h3><a class="anchor" id="autotoc_md9"></a>
 Run Wake-o-matic</h3>
 <p>From the <code>/bin/</code> folder, enter <code>./wake-o-matic-main</code></p>
-<h3><a class="anchor" id="autotoc_md11"></a>
+<h3><a class="anchor" id="autotoc_md10"></a>
 Running the tests (not required)</h3>
 <p>We utilise CTest, built-in with CMake, to issue our unit tests. You can run the tests yourself by entering <code>ctest</code> from the <code>/bin/</code> directory.</p>
-<h2><a class="anchor" id="autotoc_md12"></a>
+<h2><a class="anchor" id="autotoc_md11"></a>
 File Structure</h2>
 <p><code>docs</code> contains documentation and diagrams produced through the project <code>include</code> and <code>lib</code> are blank folders, populated by CMake when built locally <code>src</code> contains main source code to build | <code>src/modules</code> contains C++ files for various sub-procedures <code>test</code> | <code>test/lib</code> is a blank folder, populated by CMake for test-specific libraries | <code>test/src</code> contains C++ unit testing files (CppUnit)</p>
-<h2><a class="anchor" id="autotoc_md13"></a>
+<h2><a class="anchor" id="autotoc_md12"></a>
 Founders</h2>
 <ul>
 <li><a href="https://github.com/Jenibluere">Charlie Cameron</a></li>
@@ -146,7 +146,7 @@ Founders</h2>
 <li><a href="https://github.com/Hamlob">Peter Konecny</a></li>
 <li><a href="https://github.com/MrMeerkat">Ying Wang</a></li>
 </ul>
-<h2><a class="anchor" id="autotoc_md14"></a>
+<h2><a class="anchor" id="autotoc_md13"></a>
 Roadmap</h2>
 <p>Here's a general roadmap of the milestones that we are working towards. You can find out more in our <a href="https://github.com/Hamlob/wake-o-matic/releases">release log</a>.</p>
 <p>=&gt;<b>V1.0</b>: We've been working hard to get our MVP fully working, which we can now say we have! Our product is still a bit rough around the edges, but the basic features work and we have it all open-source for you!</p>
