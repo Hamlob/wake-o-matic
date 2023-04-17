@@ -53,10 +53,10 @@ We utilise CTest, built-in with CMake, to issue our unit tests. You can run the 
 | `test/src` contains C++ unit testing files (CppUnit)
 
 ## Founders
-* [Charlie Cameron](https://github.com/Jenibluere)
-* [Gabriel Dzharadat](https://github.com/GJaradat)
-* [Peter Konecny](https://github.com/Hamlob)
-* [Ying Wang](https://github.com/MrMeerkat)
+* [Charlie Cameron](https://github.com/Jenibluere) - Github repo managment + action and logging implementation
+* [Gabriel Dzharadat](https://github.com/GJaradat) - Product promotion + mechanical design
+* [Peter Konecny](https://github.com/Hamlob) - Sleep/Drowsiness detection algorithm
+* [Ying Wang](https://github.com/MrMeerkat) - Action and logging implementation + hardware
 
 ## Roadmap
 Here's a general roadmap of the milestones that we are working towards. You can find out more in our [release log](https://github.com/Hamlob/wake-o-matic/releases).
