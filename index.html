@@ -112,13 +112,13 @@ Getting Started</h2>
 Requirements</h3>
 <p>This project is designed to be deployed under the following requirements, and has only been tested as such; however you may find ways to make it work on other systems.</p><ul>
 <li><a href="https://www.raspberrypi.com/products/raspberry-pi-3-model-b-plus/">Raspberry Pi</a> (model 3B+ or newer) and compatible power supply<ul>
-<li>With OpenCV installed</li>
-<li>Boost installed (V1.71)</li>
-<li>CMake installed</li>
+<li>With OpenCV installed (Recommended: V4.0.0) <a href="https://robu.in/installing-opencv-using-cmake-in-raspberry-pi/">We followed this guide</a> but you can also save time by <a href="https://solarianprogrammer.com/2018/12/18/cross-compile-opencv-raspberry-pi-raspbian/">Cross-compiling OpenCV using a separate device</a>.</li>
+<li>Boost installed (Optional, recommended: V1.71): <code>sudo apt-get install libboost-all-dev</code></li>
+<li>CMake installed (V3.16 or newer)</li>
 </ul>
 </li>
-<li><a href="https://shop.pimoroni.com/products/night-vision-camera-module-for-raspberry-pi">Night vision camera module</a>, we recommend the 70° lens, but both work</li>
-<li><a href="https://www.raspberrypi.com/software/operating-systems/">Raspberry Pi OS</a> (aka Raspian) 5.10 or newer</li>
+<li><a href="https://shop.pimoroni.com/products/night-vision-camera-module-for-raspberry-pi">Night vision camera module</a>, we recommend the 70° lens, but both work well.</li>
+<li><a href="https://www.raspberrypi.com/software/operating-systems/">Raspberry Pi OS</a> (aka Raspian) (Recommended: V5.10 or newer)</li>
 <li>An audio amplifier/speaker compatible with rpi, <a href="https://shop.pimoroni.com/products/adafruit-stemma-speaker-plug-and-play-audio-amplifier">like this one</a>, along with the necessary cables to connect everything</li>
 </ul>
 <h3><a class="anchor" id="autotoc_md9"></a>
@@ -126,7 +126,7 @@ Installation</h3>
 <ol type="1">
 <li>Clone the repository in a convenient location</li>
 <li><code>cd bin</code></li>
-<li><code>cmake ..</code></li>
+<li><code>cmake ..</code> Note: if you would like to include the debug log when you run the code, add the <code>-DSAVE_LOG</code> flag.</li>
 <li><code>cmake --build .</code></li>
 </ol>
 <h3><a class="anchor" id="autotoc_md10"></a>
@@ -144,8 +144,16 @@ Founders</h2>
 <li><a href="https://github.com/Jenibluere">Charlie Cameron</a></li>
 <li><a href="https://github.com/GJaradat">Gabriel Dzharadat</a></li>
 <li><a href="https://github.com/Hamlob">Peter Konecny</a></li>
-<li><a href="https://github.com/MrMeerkat">Ying Wang</a> </li>
+<li><a href="https://github.com/MrMeerkat">Ying Wang</a></li>
 </ul>
+<h2><a class="anchor" id="autotoc_md14"></a>
+Roadmap</h2>
+<p>Here's a general roadmap of the milestones that we are working towards. You can find out more in our <a href="https://github.com/Hamlob/wake-o-matic/releases">release log</a>.</p>
+<p>=&gt;<b>V1.0</b>: We've been working hard to get our MVP fully working, which we can now say we have! Our product is still a bit rough around the edges, but the basic features work and we have it all open-source for you!</p>
+<p><b>V1.1</b>: In this version, we aim to have found most of the edge-case bugs and fixed them all. We will also have some of our optional extra features included. We may also have a new revision of the 3D-printed enclosure in this version, should we see any need for an upgrade. By now, we hope to have a good foundation of documentation, troubleshooting resources and tutorials, to make it easy to have your own wake-o-matic!</p>
+<p><b>V1.2</b>: Mobile app! We hope to have a companion app for our users to customise their device settings all day and night (except when driving :o)!</p>
+<p><b>V1.3</b>: This version will introduce our corporate features, allowing the wake-o-matic to be deployed in rental/company cars and configured to send certain telemetry to a server (subject to legal matters).</p>
+<p><b>V1.4</b>: Production model preparation: by now, we should have our wheels firmly on the road, and will have sorted out the logistical matters of a production release. Stay tuned, because the wake-o-matic could become available to buy off-the-shelf! </p>
 </div></div><!-- PageDoc -->
 </div><!-- contents -->
 </div><!-- doc-content -->

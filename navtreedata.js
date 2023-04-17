@@ -37,6 +37,7 @@ var NAVTREE =
       ] ],
       [ "File Structure", "index.html#autotoc_md12", null ],
       [ "Founders", "index.html#autotoc_md13", null ],
+      [ "Roadmap", "index.html#autotoc_md14", null ],
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],
       [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],
